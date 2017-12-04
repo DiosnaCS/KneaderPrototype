@@ -113,15 +113,15 @@ WriteLiteral("                ");
             #line hidden
 WriteLiteral("\r\n                <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 636), Tuple.Create("\"", 698)
-, Tuple.Create(Tuple.Create("", 643), Tuple.Create("/Download/downloadFile?nameFile=", 643), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 646), Tuple.Create("\"", 708)
+, Tuple.Create(Tuple.Create("", 653), Tuple.Create("/Download/downloadFile?nameFile=", 653), true)
             
             #line 20 "..\..\Views\Download\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 675), Tuple.Create<System.Object, System.Int32>(filesForMask.pathes[i]
+, Tuple.Create(Tuple.Create("", 685), Tuple.Create<System.Object, System.Int32>(filesForMask.pathes[i]
             
             #line default
             #line hidden
-, 675), false)
+, 685), false)
 );
 
 WriteLiteral(">Download</a>\r\n");
@@ -142,16 +142,16 @@ WriteLiteral(">Download</a>\r\n");
             #line hidden
 WriteLiteral("                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 876), Tuple.Create("\"", 945)
-, Tuple.Create(Tuple.Create("", 883), Tuple.Create("/Download/downloadFile?nameFile=", 883), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 886), Tuple.Create("\"", 955)
+, Tuple.Create(Tuple.Create("", 893), Tuple.Create("/Download/downloadFile?nameFile=", 893), true)
             
             #line 23 "..\..\Views\Download\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 915), Tuple.Create<System.Object, System.Int32>(filesForMask.pathes[i]
+, Tuple.Create(Tuple.Create("", 925), Tuple.Create<System.Object, System.Int32>(filesForMask.pathes[i]
             
             #line default
             #line hidden
-, 915), false)
-, Tuple.Create(Tuple.Create("", 938), Tuple.Create("&View=1", 938), true)
+, 925), false)
+, Tuple.Create(Tuple.Create("", 948), Tuple.Create("&View=1", 948), true)
 );
 
 WriteLiteral(">View</a>\r\n");

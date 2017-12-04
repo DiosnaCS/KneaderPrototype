@@ -79,16 +79,16 @@ WriteLiteral("        <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 367), Tuple.Create("\"", 396)
-, Tuple.Create(Tuple.Create("", 374), Tuple.Create("/Alarm/Page/", 374), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 372), Tuple.Create("\"", 401)
+, Tuple.Create(Tuple.Create("", 379), Tuple.Create("/Alarm/Page/", 379), true)
             
             #line 16 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 386), Tuple.Create<System.Object, System.Int32>(pageLess
+, Tuple.Create(Tuple.Create("", 391), Tuple.Create<System.Object, System.Int32>(pageLess
             
             #line default
             #line hidden
-, 386), false)
-, Tuple.Create(Tuple.Create("", 395), Tuple.Create("/", 395), true)
+, 391), false)
+, Tuple.Create(Tuple.Create("", 400), Tuple.Create("/", 400), true)
 );
 
 WriteLiteral(">&lArr;</a>\r\n");
@@ -113,16 +113,16 @@ WriteLiteral("\r\n    <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 475), Tuple.Create("\"", 504)
-, Tuple.Create(Tuple.Create("", 482), Tuple.Create("/Alarm/Page/", 482), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 480), Tuple.Create("\"", 509)
+, Tuple.Create(Tuple.Create("", 487), Tuple.Create("/Alarm/Page/", 487), true)
             
             #line 19 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 494), Tuple.Create<System.Object, System.Int32>(pageMore
+, Tuple.Create(Tuple.Create("", 499), Tuple.Create<System.Object, System.Int32>(pageMore
             
             #line default
             #line hidden
-, 494), false)
-, Tuple.Create(Tuple.Create("", 503), Tuple.Create("/", 503), true)
+, 499), false)
+, Tuple.Create(Tuple.Create("", 508), Tuple.Create("/", 508), true)
 );
 
 WriteLiteral(">&rArr;</a>\r\n");
@@ -189,23 +189,23 @@ WriteLiteral(">\r\n        <br>\r\n        <p>\r\n        <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 914), Tuple.Create("\"", 1009)
-, Tuple.Create(Tuple.Create("", 921), Tuple.Create("/AlarmNotification/All?name=", 921), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 919), Tuple.Create("\"", 1014)
+, Tuple.Create(Tuple.Create("", 926), Tuple.Create("/AlarmNotification/All?name=", 926), true)
             
             #line 33 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 949), Tuple.Create<System.Object, System.Int32>(Request.QueryString["name"]
+, Tuple.Create(Tuple.Create("", 954), Tuple.Create<System.Object, System.Int32>(Request.QueryString["name"]
             
             #line default
             #line hidden
-, 949), false)
-, Tuple.Create(Tuple.Create("", 977), Tuple.Create("&plc=", 977), true)
+, 954), false)
+, Tuple.Create(Tuple.Create("", 982), Tuple.Create("&plc=", 982), true)
             
             #line 33 "..\..\Views\Alarm\Index.cshtml"
-                          , Tuple.Create(Tuple.Create("", 982), Tuple.Create<System.Object, System.Int32>(Request.QueryString["plc"]
+                          , Tuple.Create(Tuple.Create("", 987), Tuple.Create<System.Object, System.Int32>(Request.QueryString["plc"]
             
             #line default
             #line hidden
-, 982), false)
+, 987), false)
 );
 
 WriteLiteral(">Notification from all alarms</a>\r\n        <a");
@@ -224,23 +224,23 @@ WriteLiteral(">Filter from current alarms</a>\r\n        <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1270), Tuple.Create("\"", 1373)
-, Tuple.Create(Tuple.Create("", 1277), Tuple.Create("/AlarmNotification/FromCurrent?name=", 1277), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 1275), Tuple.Create("\"", 1378)
+, Tuple.Create(Tuple.Create("", 1282), Tuple.Create("/AlarmNotification/FromCurrent?name=", 1282), true)
             
             #line 36 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1313), Tuple.Create<System.Object, System.Int32>(Request.QueryString["name"]
+, Tuple.Create(Tuple.Create("", 1318), Tuple.Create<System.Object, System.Int32>(Request.QueryString["name"]
             
             #line default
             #line hidden
-, 1313), false)
-, Tuple.Create(Tuple.Create("", 1341), Tuple.Create("&plc=", 1341), true)
+, 1318), false)
+, Tuple.Create(Tuple.Create("", 1346), Tuple.Create("&plc=", 1346), true)
             
             #line 36 "..\..\Views\Alarm\Index.cshtml"
-                                 , Tuple.Create(Tuple.Create("", 1346), Tuple.Create<System.Object, System.Int32>(Request.QueryString["plc"]
+                                 , Tuple.Create(Tuple.Create("", 1351), Tuple.Create<System.Object, System.Int32>(Request.QueryString["plc"]
             
             #line default
             #line hidden
-, 1346), false)
+, 1351), false)
 );
 
 WriteLiteral(">Notification from current alarms</a>\r\n        </p>\r\n    </div>\r\n");
@@ -337,15 +337,15 @@ WriteLiteral("            <td>");
             #line hidden
 WriteLiteral("</td>\r\n            <td");
 
-WriteAttribute("id", Tuple.Create(" id=\"", 2198), Tuple.Create("\"", 2210)
-, Tuple.Create(Tuple.Create("", 2203), Tuple.Create("date_", 2203), true)
+WriteAttribute("id", Tuple.Create(" id=\"", 2203), Tuple.Create("\"", 2215)
+, Tuple.Create(Tuple.Create("", 2208), Tuple.Create("date_", 2208), true)
             
             #line 63 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 2208), Tuple.Create<System.Object, System.Int32>(i
+, Tuple.Create(Tuple.Create("", 2213), Tuple.Create<System.Object, System.Int32>(i
             
             #line default
             #line hidden
-, 2208), false)
+, 2213), false)
 );
 
 WriteLiteral(">");
@@ -359,15 +359,15 @@ WriteLiteral(">");
             #line hidden
 WriteLiteral("</td>\r\n            <td");
 
-WriteAttribute("id", Tuple.Create(" id=\"", 2254), Tuple.Create("\"", 2269)
-, Tuple.Create(Tuple.Create("", 2259), Tuple.Create("expDate_", 2259), true)
+WriteAttribute("id", Tuple.Create(" id=\"", 2259), Tuple.Create("\"", 2274)
+, Tuple.Create(Tuple.Create("", 2264), Tuple.Create("expDate_", 2264), true)
             
             #line 64 "..\..\Views\Alarm\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 2267), Tuple.Create<System.Object, System.Int32>(i
+, Tuple.Create(Tuple.Create("", 2272), Tuple.Create<System.Object, System.Int32>(i
             
             #line default
             #line hidden
-, 2267), false)
+, 2272), false)
 );
 
 WriteLiteral(">");

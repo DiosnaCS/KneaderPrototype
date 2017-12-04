@@ -97,25 +97,25 @@ WriteLiteral("        <input");
 
 WriteLiteral(" type=\"hidden\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 790), Tuple.Create("\"", 805)
-, Tuple.Create(Tuple.Create("", 797), Tuple.Create("table_", 797), true)
+WriteAttribute("name", Tuple.Create(" name=\"", 795), Tuple.Create("\"", 810)
+, Tuple.Create(Tuple.Create("", 802), Tuple.Create("table_", 802), true)
             
             #line 29 "..\..\Views\GraphNotification\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 803), Tuple.Create<System.Object, System.Int32>(i
+, Tuple.Create(Tuple.Create("", 808), Tuple.Create<System.Object, System.Int32>(i
             
             #line default
             #line hidden
-, 803), false)
+, 808), false)
 );
 
-WriteAttribute("value", Tuple.Create(" value=\"", 806), Tuple.Create("\"", 825)
+WriteAttribute("value", Tuple.Create(" value=\"", 811), Tuple.Create("\"", 830)
             
             #line 29 "..\..\Views\GraphNotification\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 814), Tuple.Create<System.Object, System.Int32>(item.table
+, Tuple.Create(Tuple.Create("", 819), Tuple.Create<System.Object, System.Int32>(item.table
             
             #line default
             #line hidden
-, 814), false)
+, 819), false)
 );
 
 WriteLiteral(">\r\n");
@@ -124,14 +124,14 @@ WriteLiteral("        <tr>\r\n            <td>\r\n                <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 899), Tuple.Create("\"", 918)
+WriteAttribute("name", Tuple.Create(" name=\"", 904), Tuple.Create("\"", 923)
             
             #line 32 "..\..\Views\GraphNotification\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 906), Tuple.Create<System.Object, System.Int32>(item.column
+, Tuple.Create(Tuple.Create("", 911), Tuple.Create<System.Object, System.Int32>(item.column
             
             #line default
             #line hidden
-, 906), false)
+, 911), false)
 );
 
 WriteLiteral(">\r\n            </td>\r\n            <td>\r\n");
@@ -149,15 +149,15 @@ WriteLiteral("\r\n            </td>\r\n            <td>\r\n                <inpu
 
 WriteLiteral(" list=\"operators\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 1095), Tuple.Create("\"", 1113)
-, Tuple.Create(Tuple.Create("", 1102), Tuple.Create("operator_", 1102), true)
+WriteAttribute("name", Tuple.Create(" name=\"", 1100), Tuple.Create("\"", 1118)
+, Tuple.Create(Tuple.Create("", 1107), Tuple.Create("operator_", 1107), true)
             
             #line 38 "..\..\Views\GraphNotification\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1111), Tuple.Create<System.Object, System.Int32>(i
+, Tuple.Create(Tuple.Create("", 1116), Tuple.Create<System.Object, System.Int32>(i
             
             #line default
             #line hidden
-, 1111), false)
+, 1116), false)
 );
 
 WriteLiteral(">\r\n                <datalist");
@@ -189,15 +189,15 @@ WriteLiteral(">\r\n                    <input");
 
 WriteLiteral(" type=\"text\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 1569), Tuple.Create("\"", 1583)
-, Tuple.Create(Tuple.Create("", 1576), Tuple.Create("text_", 1576), true)
+WriteAttribute("name", Tuple.Create(" name=\"", 1574), Tuple.Create("\"", 1588)
+, Tuple.Create(Tuple.Create("", 1581), Tuple.Create("text_", 1581), true)
             
             #line 48 "..\..\Views\GraphNotification\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1581), Tuple.Create<System.Object, System.Int32>(i
+, Tuple.Create(Tuple.Create("", 1586), Tuple.Create<System.Object, System.Int32>(i
             
             #line default
             #line hidden
-, 1581), false)
+, 1586), false)
 );
 
 WriteLiteral(">\r\n                </div>\r\n                \r\n            </td>\r\n        </tr>\r\n");

@@ -161,23 +161,12 @@ WriteLiteral("            ");
             
             #line default
             #line hidden
-WriteLiteral("\r\n        </dd>\r\n\r\n    </dl>\r\n</div>\r\n<p>\r\n");
+WriteLiteral("\r\n        </dd>\r\n\r\n    </dl>\r\n</div>\r\n<p>    \r\n");
 
 WriteLiteral("    ");
 
             
             #line 56 "..\..\Views\CMS\DetailSection.cshtml"
-Write(Html.ActionLink("Edit", "Edit", new { id = Model.Id }));
-
-            
-            #line default
-            #line hidden
-WriteLiteral(" |\r\n");
-
-WriteLiteral("    ");
-
-            
-            #line 57 "..\..\Views\CMS\DetailSection.cshtml"
 Write(Html.ActionLink("Back to List", "Index"));
 
             

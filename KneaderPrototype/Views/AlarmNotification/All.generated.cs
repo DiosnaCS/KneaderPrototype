@@ -94,14 +94,14 @@ WriteLiteral("                <tr>\r\n                    <td><input");
 
 WriteLiteral(" type=\"checkbox\"");
 
-WriteAttribute("name", Tuple.Create(" name=\"", 780), Tuple.Create("\"", 796)
+WriteAttribute("name", Tuple.Create(" name=\"", 785), Tuple.Create("\"", 801)
             
             #line 21 "..\..\Views\AlarmNotification\All.cshtml"
-, Tuple.Create(Tuple.Create("", 787), Tuple.Create<System.Object, System.Int32>(Alarm.id
+, Tuple.Create(Tuple.Create("", 792), Tuple.Create<System.Object, System.Int32>(Alarm.id
             
             #line default
             #line hidden
-, 787), false)
+, 792), false)
 );
 
 WriteLiteral(">");

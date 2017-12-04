@@ -72,15 +72,15 @@ WriteLiteral("\r\n\r\n<h4>Batch Detail</h4>\r\n\r\n<p>\r\n    <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 436), Tuple.Create("\"", 472)
-, Tuple.Create(Tuple.Create("", 443), Tuple.Create("/Report/GetPrevBatch/", 443), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 451), Tuple.Create("\"", 487)
+, Tuple.Create(Tuple.Create("", 458), Tuple.Create("/Report/GetPrevBatch/", 458), true)
             
             #line 19 "..\..\Views\Report\Detail.cshtml"
-, Tuple.Create(Tuple.Create("", 464), Tuple.Create<System.Object, System.Int32>(BatchNo
+, Tuple.Create(Tuple.Create("", 479), Tuple.Create<System.Object, System.Int32>(BatchNo
             
             #line default
             #line hidden
-, 464), false)
+, 479), false)
 );
 
 WriteLiteral(">Previouse batch</a> Batch number: ");
@@ -96,15 +96,15 @@ WriteLiteral(" <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 546), Tuple.Create("\"", 582)
-, Tuple.Create(Tuple.Create("", 553), Tuple.Create("/Report/GetNextBatch/", 553), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 561), Tuple.Create("\"", 597)
+, Tuple.Create(Tuple.Create("", 568), Tuple.Create("/Report/GetNextBatch/", 568), true)
             
             #line 19 "..\..\Views\Report\Detail.cshtml"
-                                                                                            , Tuple.Create(Tuple.Create("", 574), Tuple.Create<System.Object, System.Int32>(BatchNo
+                                                                                            , Tuple.Create(Tuple.Create("", 589), Tuple.Create<System.Object, System.Int32>(BatchNo
             
             #line default
             #line hidden
-, 574), false)
+, 589), false)
 );
 
 WriteLiteral(">Next batch</a>\r\n    <br>\r\n    <p>\r\n        <h4>Batch info</h4>\r\n        <div");

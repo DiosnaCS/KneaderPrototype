@@ -183,17 +183,6 @@ WriteLiteral("    ");
 
             
             #line 89 "..\..\Views\CMS\DetailArticle.cshtml"
-Write(Html.ActionLink("Edit", "Edit", new { id = Model.Id }));
-
-            
-            #line default
-            #line hidden
-WriteLiteral(" |\r\n");
-
-WriteLiteral("    ");
-
-            
-            #line 90 "..\..\Views\CMS\DetailArticle.cshtml"
 Write(Html.ActionLink("Back to list of articles", "Index"));
 
             

@@ -154,21 +154,21 @@ WriteLiteral("\r\n                \r\n");
             #line hidden
 WriteLiteral("                    <option");
 
-WriteAttribute("value", Tuple.Create(" value=\"", 1011), Tuple.Create("\"", 1039)
+WriteAttribute("value", Tuple.Create(" value=\"", 1016), Tuple.Create("\"", 1044)
             
             #line 32 "..\..\Views\Manage\DefaultView.cshtml"
-, Tuple.Create(Tuple.Create("", 1019), Tuple.Create<System.Object, System.Int32>(name
-            
-            #line default
-            #line hidden
-, 1019), false)
-            
-            #line 32 "..\..\Views\Manage\DefaultView.cshtml"
-, Tuple.Create(Tuple.Create("", 1024), Tuple.Create<System.Object, System.Int32>(ViewBag.plc[i]
+, Tuple.Create(Tuple.Create("", 1024), Tuple.Create<System.Object, System.Int32>(name
             
             #line default
             #line hidden
 , 1024), false)
+            
+            #line 32 "..\..\Views\Manage\DefaultView.cshtml"
+, Tuple.Create(Tuple.Create("", 1029), Tuple.Create<System.Object, System.Int32>(ViewBag.plc[i]
+            
+            #line default
+            #line hidden
+, 1029), false)
 );
 
 WriteLiteral(">");

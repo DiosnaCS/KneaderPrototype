@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UsersDiosna</RootNamespace>
-    <AssemblyName>UsersDiosna</AssemblyName>
+    <RootNamespace>KneaderPrototype</RootNamespace>
+    <AssemblyName>KneaderPrototype</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -38,25 +38,18 @@
     <Prefer32Bit>false</Prefer32Bit>
     <PublishDatabaseSettings>
       <Objects>
-        <ObjectGroup Name="DefaultConnection-Deployment" Order="3">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=MAREK-HP\SQL2016%3bInitial Catalog=C:\AKCE\ASPNET-MVCTutorial-20160422011939.MDF%3bPersist Security Info=True%3bUser ID=sa%3bPassword=Nordit0276" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\DefaultConnection-Deployment_SchemaOnly.sql" Transacted="True" />
-          </Object>
-        </ObjectGroup>
-        <ObjectGroup Name="DubravicaConnectionString-Deployment" Order="2" xmlns="">
-          <Destination Path="" />
-          <Object Type="DbFullSql">
-            <PreSource Path="Data Source=MAREK-HP\SQL2016%3bInitial Catalog=C:\AKCE\ASPNET-MVCTutorial-20160422011939.MDF%3bPersist Security Info=True%3bUser ID=sa%3bPassword=Nordit0276" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
-            <Source Path="obj\Debug\AutoScripts\DubravicaConnectionString-Deployment_SchemaOnly.sql" Transacted="True" />
+        <ObjectGroup Name="Default- For Deploy" Order="5" xmlns="" Enabled="False">
+          <Destination Path="Data Source=WIN-3Q32MKB0C97\SQL%3bInitial Catalog=MainDB%3bPersist Security Info=True%3bUser ID=sa%3bPassword=Nordit0276" />
+          <Object Type="DbFullSql" Enabled="False">
+            <PreSource Path="" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\Default- For Deploy_SchemaOnly.sql" Transacted="True" />
           </Object>
         </ObjectGroup>
       </Objects>
     </PublishDatabaseSettings>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
-    <PublishDatabases>false</PublishDatabases>
+    <PublishDatabases>true</PublishDatabases>
     <DocumentationFile>
     </DocumentationFile>
   </PropertyGroup>

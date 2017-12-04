@@ -96,23 +96,23 @@ WriteLiteral(">\r\n    <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1035), Tuple.Create("\"", 1080)
-, Tuple.Create(Tuple.Create("", 1042), Tuple.Create("/ReportOverview/Month/", 1042), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 1040), Tuple.Create("\"", 1085)
+, Tuple.Create(Tuple.Create("", 1047), Tuple.Create("/ReportOverview/Month/", 1047), true)
             
             #line 41 "..\..\Views\ReportOverview\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1064), Tuple.Create<System.Object, System.Int32>(monthLess
+, Tuple.Create(Tuple.Create("", 1069), Tuple.Create<System.Object, System.Int32>(monthLess
             
             #line default
             #line hidden
-, 1064), false)
-, Tuple.Create(Tuple.Create("", 1074), Tuple.Create("/", 1074), true)
+, 1069), false)
+, Tuple.Create(Tuple.Create("", 1079), Tuple.Create("/", 1079), true)
             
             #line 41 "..\..\Views\ReportOverview\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 1075), Tuple.Create<System.Object, System.Int32>(year
+, Tuple.Create(Tuple.Create("", 1080), Tuple.Create<System.Object, System.Int32>(year
             
             #line default
             #line hidden
-, 1075), false)
+, 1080), false)
 );
 
 WriteLiteral(">-1 month</a> Month: ");
@@ -137,23 +137,23 @@ WriteLiteral(" <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1148), Tuple.Create("\"", 1193)
-, Tuple.Create(Tuple.Create("", 1155), Tuple.Create("/ReportOverview/Month/", 1155), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 1153), Tuple.Create("\"", 1198)
+, Tuple.Create(Tuple.Create("", 1160), Tuple.Create("/ReportOverview/Month/", 1160), true)
             
             #line 41 "..\..\Views\ReportOverview\Index.cshtml"
-                                                                                               , Tuple.Create(Tuple.Create("", 1177), Tuple.Create<System.Object, System.Int32>(monthMore
+                                                                                               , Tuple.Create(Tuple.Create("", 1182), Tuple.Create<System.Object, System.Int32>(monthMore
             
             #line default
             #line hidden
-, 1177), false)
-, Tuple.Create(Tuple.Create("", 1187), Tuple.Create("/", 1187), true)
+, 1182), false)
+, Tuple.Create(Tuple.Create("", 1192), Tuple.Create("/", 1192), true)
             
             #line 41 "..\..\Views\ReportOverview\Index.cshtml"
-                                                                                                          , Tuple.Create(Tuple.Create("", 1188), Tuple.Create<System.Object, System.Int32>(year
+                                                                                                          , Tuple.Create(Tuple.Create("", 1193), Tuple.Create<System.Object, System.Int32>(year
             
             #line default
             #line hidden
-, 1188), false)
+, 1193), false)
 );
 
 WriteLiteral(">+1 month</a>\r\n    <p></p>\r\n</div>\r\n");
@@ -526,14 +526,14 @@ WriteLiteral("        </tr>\r\n    </thead>\r\n");
             #line hidden
 WriteLiteral("            <tr");
 
-WriteAttribute("class", Tuple.Create(" class=\"", 3750), Tuple.Create("\"", 3773)
+WriteAttribute("class", Tuple.Create(" class=\"", 3755), Tuple.Create("\"", 3778)
             
             #line 104 "..\..\Views\ReportOverview\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 3758), Tuple.Create<System.Object, System.Int32>(colourRowClass
+, Tuple.Create(Tuple.Create("", 3763), Tuple.Create<System.Object, System.Int32>(colourRowClass
             
             #line default
             #line hidden
-, 3758), false)
+, 3763), false)
 );
 
 WriteLiteral(">\r\n                    <td>");

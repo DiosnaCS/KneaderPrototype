@@ -52,31 +52,31 @@ WriteLiteral("\r\n\r\n<h4>Day of dosings</h4>\r\n\r\n<p>\r\n    <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 236), Tuple.Create("\"", 299)
-, Tuple.Create(Tuple.Create("", 243), Tuple.Create("/ReporDosing/Day/", 243), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 241), Tuple.Create("\"", 304)
+, Tuple.Create(Tuple.Create("", 248), Tuple.Create("/ReporDosing/Day/", 248), true)
             
             #line 11 "..\..\Views\ReportDosing\Day.cshtml"
-, Tuple.Create(Tuple.Create("", 260), Tuple.Create<System.Object, System.Int32>(Model.Day-1
+, Tuple.Create(Tuple.Create("", 265), Tuple.Create<System.Object, System.Int32>(Model.Day-1
             
             #line default
             #line hidden
-, 260), false)
-, Tuple.Create(Tuple.Create("", 274), Tuple.Create("/", 274), true)
+, 265), false)
+, Tuple.Create(Tuple.Create("", 279), Tuple.Create("/", 279), true)
             
             #line 11 "..\..\Views\ReportDosing\Day.cshtml"
-, Tuple.Create(Tuple.Create("", 275), Tuple.Create<System.Object, System.Int32>(Model.Month
+, Tuple.Create(Tuple.Create("", 280), Tuple.Create<System.Object, System.Int32>(Model.Month
             
             #line default
             #line hidden
-, 275), false)
-, Tuple.Create(Tuple.Create("", 287), Tuple.Create("/", 287), true)
+, 280), false)
+, Tuple.Create(Tuple.Create("", 292), Tuple.Create("/", 292), true)
             
             #line 11 "..\..\Views\ReportDosing\Day.cshtml"
-      , Tuple.Create(Tuple.Create("", 288), Tuple.Create<System.Object, System.Int32>(Model.Year
+      , Tuple.Create(Tuple.Create("", 293), Tuple.Create<System.Object, System.Int32>(Model.Year
             
             #line default
             #line hidden
-, 288), false)
+, 293), false)
 );
 
 WriteLiteral(">&lArr; Day</a> \r\n");
@@ -103,31 +103,31 @@ WriteLiteral("\r\n    <a");
 
 WriteLiteral(" class=\"btn-sm btn-primary\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 404), Tuple.Create("\"", 467)
-, Tuple.Create(Tuple.Create("", 411), Tuple.Create("/ReporDosing/Day/", 411), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 409), Tuple.Create("\"", 472)
+, Tuple.Create(Tuple.Create("", 416), Tuple.Create("/ReporDosing/Day/", 416), true)
             
             #line 13 "..\..\Views\ReportDosing\Day.cshtml"
-, Tuple.Create(Tuple.Create("", 428), Tuple.Create<System.Object, System.Int32>(Model.Day+1
+, Tuple.Create(Tuple.Create("", 433), Tuple.Create<System.Object, System.Int32>(Model.Day+1
             
             #line default
             #line hidden
-, 428), false)
-, Tuple.Create(Tuple.Create("", 442), Tuple.Create("/", 442), true)
+, 433), false)
+, Tuple.Create(Tuple.Create("", 447), Tuple.Create("/", 447), true)
             
             #line 13 "..\..\Views\ReportDosing\Day.cshtml"
-, Tuple.Create(Tuple.Create("", 443), Tuple.Create<System.Object, System.Int32>(Model.Month
+, Tuple.Create(Tuple.Create("", 448), Tuple.Create<System.Object, System.Int32>(Model.Month
             
             #line default
             #line hidden
-, 443), false)
-, Tuple.Create(Tuple.Create("", 455), Tuple.Create("/", 455), true)
+, 448), false)
+, Tuple.Create(Tuple.Create("", 460), Tuple.Create("/", 460), true)
             
             #line 13 "..\..\Views\ReportDosing\Day.cshtml"
-      , Tuple.Create(Tuple.Create("", 456), Tuple.Create<System.Object, System.Int32>(Model.Year
+      , Tuple.Create(Tuple.Create("", 461), Tuple.Create<System.Object, System.Int32>(Model.Year
             
             #line default
             #line hidden
-, 456), false)
+, 461), false)
 );
 
 WriteLiteral(">Day &rArr;</a> \r\n</p>\r\n<table");

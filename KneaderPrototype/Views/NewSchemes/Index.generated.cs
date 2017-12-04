@@ -49,9 +49,9 @@ namespace ASP
             #line hidden
 WriteLiteral("\r\n\r\n<h2>New scheme</h2>\r\n<script");
 
-WriteAttribute("src", Tuple.Create(" src=\"", 121), Tuple.Create("\"", 150)
-, Tuple.Create(Tuple.Create("", 127), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/NewSchemes.js")
-, 127), false)
+WriteAttribute("src", Tuple.Create(" src=\"", 126), Tuple.Create("\"", 155)
+, Tuple.Create(Tuple.Create("", 132), Tuple.Create<System.Object, System.Int32>(Href("~/Scripts/NewSchemes.js")
+, 132), false)
 );
 
 WriteLiteral(" ></script>\r\n<div");
@@ -73,14 +73,14 @@ WriteLiteral("\r\n  <object");
 
 WriteLiteral(" type=\"image/svg+xml\"");
 
-WriteAttribute("data", Tuple.Create(" data=\"", 292), Tuple.Create("\"", 318)
+WriteAttribute("data", Tuple.Create(" data=\"", 297), Tuple.Create("\"", 323)
             
             #line 10 "..\..\Views\NewSchemes\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 299), Tuple.Create<System.Object, System.Int32>(Model.relativePath
+, Tuple.Create(Tuple.Create("", 304), Tuple.Create<System.Object, System.Int32>(Model.relativePath
             
             #line default
             #line hidden
-, 299), false)
+, 304), false)
 );
 
 WriteLiteral(">\r\n      Your object does not suupport SVG\r\n  </object>\r\n</div>");

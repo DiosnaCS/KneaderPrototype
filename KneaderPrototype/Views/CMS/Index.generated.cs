@@ -336,25 +336,25 @@ WriteLiteral("\r\n                    </td>\r\n                    <td>\r\n");
             #line hidden
 WriteLiteral("                            <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 3838), Tuple.Create("\"", 3893)
-, Tuple.Create(Tuple.Create("", 3845), Tuple.Create("/Download/downloadFile?nameFile=", 3845), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 3848), Tuple.Create("\"", 3903)
+, Tuple.Create(Tuple.Create("", 3855), Tuple.Create("/Download/downloadFile?nameFile=", 3855), true)
             
             #line 90 "..\..\Views\CMS\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 3877), Tuple.Create<System.Object, System.Int32>(item.Attachment
+, Tuple.Create(Tuple.Create("", 3887), Tuple.Create<System.Object, System.Int32>(item.Attachment
             
             #line default
             #line hidden
-, 3877), false)
+, 3887), false)
 );
 
-WriteAttribute("title", Tuple.Create(" title=\"", 3894), Tuple.Create("\"", 3911)
+WriteAttribute("title", Tuple.Create(" title=\"", 3904), Tuple.Create("\"", 3921)
             
             #line 90 "..\..\Views\CMS\Index.cshtml"
-              , Tuple.Create(Tuple.Create("", 3902), Tuple.Create<System.Object, System.Int32>(fileName
+              , Tuple.Create(Tuple.Create("", 3912), Tuple.Create<System.Object, System.Int32>(fileName
             
             #line default
             #line hidden
-, 3902), false)
+, 3912), false)
 );
 
 WriteLiteral(">Download</a>\r\n");

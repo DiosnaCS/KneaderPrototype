@@ -73,7 +73,7 @@ WriteLiteral(" At: ");
 
             
             #line 10 "..\..\Views\Shared\Error.cshtml"
-                                              Write(DateTime.Now.ToShortTimeString());
+                                                   Write(DateTime.Now.ToShortTimeString());
 
             
             #line default
@@ -82,7 +82,7 @@ WriteLiteral(" Happened on: ");
 
             
             #line 10 "..\..\Views\Shared\Error.cshtml"
-                                                                                             Write(DateTime.Now.ToShortDateString());
+                                                                                                  Write(DateTime.Now.ToShortDateString());
 
             
             #line default
