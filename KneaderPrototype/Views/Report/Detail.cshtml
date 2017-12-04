@@ -1,0 +1,159 @@
+﻿@model IEnumerable<KneaderPrototype.Report.Models.ColumnReportModel>
+@using KneaderPrototype.Report.Models
+@using KneaderPrototype.Handlers
+
+@{
+    ViewBag.Title = "Detail";
+    int BatchNo = ViewBag.BatchNo;
+    int needSum = 0;
+    int doneSum = 0;
+    string Variant1, Variant2, Variant3, Varaiant4;
+    string need;
+    string done;
+    string dynamicRowStyle = "";
+}
+
+<h4>Batch Detail</h4>
+
+<p>
+    <a class="btn-primary btn-xs" href="/Report/GetPrevBatch/@BatchNo">Previouse batch</a> Batch number: @BatchNo <a class="btn-primary btn-xs" href="/Report/GetNextBatch/@BatchNo">Next batch</a>
+    <br>
+    <p>
+        <h4>Batch info</h4>
+        <div class="col-md-3">Destination:</div> @ViewBag.Destination<br>
+        <div class="col-md-3">Batch number:</div> @ViewBag.BatchNo<br>
+        <div class="col-md-3">Number of interuts:</div> @ViewBag.InteruptedCounts<br>
+        <div class="col-md-3">Number of skips:</div> @ViewBag.NumberOfStepsSkipped<br>
+        <div class="col-md-3">Started:</div> @Model.Min(p => p.TimeStart.ToShortDateString())<br />
+        <div class="col-md-3">Ended:</div> @Model.Max(p => p.TimeStart.ToShortDateString())<br />
+    </p>
+</p>
+<div class="table-responsive">
+<table class="table table-responsive table-condensed">
+    <tr>
+        <th>
+            Operation
+        </th>
+        <th>
+            Start time 
+        </th>
+        <th>
+            End
+        </th>
+        <th>
+            Need
+        </th>
+        <th>
+            Actual
+        </th>
+        <th>
+            Info
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+        @{ dynamicRowStyle = ""; }
+        @if ((int)item.RecordType > 9 && (int)item.RecordType < 15)
+        {
+            @if (item.RecordType == Operations.StatusInfo || item.RecordType == Operations.Continue || item.RecordType == Operations.Interrupt)
+            {
+                dynamicRowStyle = "<tr>";
+                @if (item.RecordType == Operations.Continue || item.RecordType == Operations.Interrupt)
+                {
+                    dynamicRowStyle = "<tr style=\"background-color: beige\">";
+                }
+                @Html.Raw(dynamicRowStyle)
+            }
+            else
+            {
+                dynamicRowStyle = "<tr style=\"background-color: darkseagreen\"><i>"; @Html.DisplayFor(modelItem => item.RecordType)
+                @Html.Raw(dynamicRowStyle)
+            }
+        } else
+        {
+            @Html.Raw("<tr>");
+        }
+        <td>
+            @if ((int)item.RecordType > 9 && (int)item.RecordType < 15)
+            {
+                @Html.Raw("\t");
+            }
+            @Html.DisplayFor(modelItem => item.RecordType)
+        </td>
+        <td>
+            @{string timeStartForView = item.TimeStart.ToShortTimeString();}
+            @timeStartForView
+        </td>
+        <td>
+            @{string timeEndForView = item.TimeEnd.ToShortTimeString();}
+            @timeEndForView
+        </td>
+        <td>
+            @if ((int)item.RecordType > 31 && (int)item.RecordType < 39) {
+                TimeSpan spanN = new TimeSpan((item.Need * 10000000));
+                need = (int)spanN.TotalHours + " h " + (int)spanN.Minutes +" m " + (int)spanN.Seconds + " s";
+            } else {
+                if ((int)item.RecordType > 21 && (int)item.RecordType < 30)
+                {
+                    needSum += item.Need;
+                }
+                need = (item.Need / 1000) + "kg";
+            }
+            @if (item.Need != 0)
+            {
+                @need
+            }
+        </td>
+        <td>
+            @if ((int)item.RecordType > 31 && (int)item.RecordType < 39)
+            {
+                TimeSpan spanD = new TimeSpan((item.Actual * 10000000));
+                done = (int)spanD.TotalHours + " h " + (int)spanD.Minutes + " m " + (int)spanD.Seconds + " s";
+            }
+            else
+            {
+                if ((int)item.RecordType > 21 && (int)item.RecordType < 30)
+                {
+                    doneSum += item.Actual;
+                }
+                done = (item.Need / 1000) + "kg";
+            }
+            @if (item.Actual != 0)
+            {
+                <b>@done</b>
+            }
+        </td>
+
+        <td>
+            @{string info = ReportHandler.getInfoColumn(item);}
+            @info
+        </td>
+
+        @if (item.RecordType == Operations.RecipeStart || item.RecordType == Operations.RecipeEnd)
+        {
+            dynamicRowStyle = "</i></tr>";
+        }
+        else {
+            dynamicRowStyle = "</tr>";
+        }
+        @Html.Raw(dynamicRowStyle)
+}
+</table>
+</div>
+<p>
+    <h4>Batch summary</h4>
+    <div class="col-md-3">RCP duration:</div> @{
+        var startTime = Model.Min(p => p.TimeStart.Ticks);
+        var endTime = Model.Max(p => p.TimeEnd.Ticks);
+        var diff = endTime - startTime;
+        TimeSpan duration = TimeSpan.FromTicks(diff);
+        int durationDays = (int)duration.Days;
+        int durationHours = (int)duration.Hours;
+        int durationMinutes = (int)duration.Minutes;
+    }
+    <b>@durationDays d @durationHours h @durationMinutes m</b><br />
+    <div class="col-md-3">Total amount dosed: </div>@(doneSum/1000) kg
+</p>
+<p>
+    <a class="btn-primary btn-sm" href="/Report/">Back to calendar</a>
+</p>

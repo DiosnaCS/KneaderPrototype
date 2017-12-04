@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+	<tankNames>
+		<MF1>21</MF1>
+		<SF1>1</SF1>
+		<SF2>2</SF2>
+		<DosingOut1>51</DosingOut1>
+	</tankNames>
+</configuration>

@@ -1,0 +1,39 @@
+﻿@model List<KneaderPrototype.Download.Models.FileForDownload>
+@{ 
+    ViewBag.Title = "Downloads";
+    string fileName;
+    int iHelper;
+    int i = 0;
+}
+<h2>@ViewBag.Title</h2>
+@if (Model != null)
+{
+    foreach (KneaderPrototype.Download.Models.FileForDownload filesForMask in Model)
+    {
+        <div class="list-group-item-heading"><b>@filesForMask.maskName</b><br></div>
+        foreach (string file in filesForMask.files)
+        {
+            iHelper = file.LastIndexOf(@"\");
+            fileName = file.Substring(iHelper + 1);
+            <div class="list-group-item-text">
+                @fileName
+                <a href="/Download/downloadFile?nameFile=@filesForMask.pathes[i]">Download</a>
+                @if (file.Contains(".pdf") || file.Contains(".txt") || file.Contains(".html") || file.Contains(".mp4"))
+                {
+                    <a href="/Download/downloadFile?nameFile=@filesForMask.pathes[i]&View=1">View</a>
+                }
+                <br>
+            </div>
+            @{i++; }
+        }
+        @{i = 0;}
+    }
+}
+else
+{
+    <div class="alert alert-warning">No files has been found</div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")

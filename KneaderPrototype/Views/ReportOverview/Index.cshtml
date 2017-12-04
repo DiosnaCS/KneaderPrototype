@@ -1,0 +1,193 @@
+﻿@using System.Threading;
+@using System.Globalization;
+@model KneaderPrototype.Report.Models.OverviewReportModel
+
+@{
+    ViewBag.Title = "Index";
+    string name = string.Empty;
+    int EndType = 0;
+    int amntTotal = 0;
+    bool thMotherCulture = false;
+    bool thFlour = false;
+    bool thWater= false;
+    bool thOldBread = false;
+    bool thLiquidYeast = false;
+    bool thMixture = false;
+    bool thGeneric = false;
+    int countHeades = 0;
+    int countOverall = 0;
+    int year = ViewBag.year;
+    int monthLess = ViewBag.Month - 1;
+    int monthMore = ViewBag.Month + 1;
+    if (monthLess < 1)
+    {
+        year--;
+        monthLess = 12;
+    }
+    if (monthMore > 12)
+    {
+        year++;
+        monthMore = 1;
+    }
+    Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+    DateTime monthDT = new DateTime(year, ViewBag.month, 1);
+    string monthName = monthDT.ToString("MMMM");
+
+}
+
+<h2>Cunsumption Report</h2>
+
+<div class=" col-md-10">
+    <a class="btn-primary btn-xs" href="/ReportOverview/Month/@monthLess/@year">-1 month</a> Month: @monthName @year <a class="btn-primary btn-xs" href="/ReportOverview/Month/@monthMore/@year">+1 month</a>
+    <p></p>
+</div>
+@if (Model.Data.Count != 0 && Model.Data.All(p => p.day !=  0))
+{
+<table class="table-bordered table-condensed table-report" id="cunsumptionTable">
+    <thead>
+        <tr >
+            <th style="min-width: 90px;">Day</th>
+            @if (Model.Data.Max(p => p.MotherCultureBatchCount > 0))
+            {
+                @{thMotherCulture = true; }
+                <th style="min-width: 90px;">Mother culture</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.FlourBatchCount > 0))
+            {
+                @{thFlour = true; }
+                <th style="min-width: 90px;">Flour</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.WaterBatchCount > 0))
+            {
+                @{thWater = true; }
+                <th style="min-width: 90px;">Water</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.OldBreadBatchCount > 0))
+            {
+                @{thOldBread = true; }
+                <th style="min-width: 90px;">Old Bread</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.LiquidYeastBatchCount > 0))
+            {
+                @{thLiquidYeast = true; }
+                <th style="min-width: 90px;">Liquid yeast</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.MixtureBatchCount > 0))
+            {
+                @{thMixture = true; }
+                <th style="min-width: 90px;">Mixture</th>
+                <th class="th-Report"></th>
+            }
+            @if (Model.Data.Max(p => p.GenericBatchCount > 0))
+            {
+                @{thGeneric = true; }
+                <th style="min-width: 90px;">Generic component</th>
+                <th class="th-Report"></th>
+            }
+        </tr>
+    </thead>
+    @for (int day = 1; day <= DateTime.DaysInMonth(year, ViewBag.month); day++)
+    {
+        @{ DateTime dayDT = new DateTime(year, ViewBag.month, day); string sDay = dayDT.DayOfWeek.ToString();  }
+                @{ string colourRowClass = string.Empty;
+                    if (dayDT.DayOfWeek == DayOfWeek.Saturday || dayDT.DayOfWeek == DayOfWeek.Sunday) {
+                        colourRowClass = "coloured";
+                    }
+                    else {
+                        colourRowClass = "not-coloured";
+                    } }
+            <tr class="@colourRowClass">
+                    <td>@day. @sDay</td>
+                @if (Model.Data.Exists(p => p.day == day))
+                {
+                    if (thMotherCulture == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.MotherCultureAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.MotherCultureBatchCount)</td>
+                    }
+                    if (thFlour == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.FlourAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.FlourBatchCount)</td>
+                    }
+                    if (thWater == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.WaterAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.WaterBatchCount)</td>
+                    }
+                    if (thOldBread == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.OldBreadAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.OldBreadBatchCount)</td>
+                    }
+                    if (thLiquidYeast == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.LiquidYeastAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.LiquidYeastBatchCount)</td>
+                    }
+                    if (thMixture == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.MixtureAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.MixtureBatchCount)</td>
+                    }
+                    if (thGeneric == true)
+                    {
+                        <td>@(Model.Data.Where(p => p.day == day).Sum(p => p.GenericAmnt) / 1000)</td>
+                        <td>@Model.Data.Where(p => p.day == day).Sum(p => p.GenericBatchCount)</td>
+                    }
+                }
+                else
+                {
+                    if (thMotherCulture == true) { <td></td><td></td> }
+                    if (thFlour == true) { <td></td><td></td> }
+                    if (thWater == true) {<td></td><td></td> }
+                    if (thOldBread == true) {  <td></td><td></td> }
+                    if (thLiquidYeast == true) {  <td></td><td></td> }
+                    if (thMixture == true) { <td></td><td></td> }
+                    if (thGeneric == true) { <td></td><td></td> }
+                }
+            </tr>
+            }
+    <tr>
+        <td><b>Summary</b></td>
+        @if (thMotherCulture == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.MotherCultureAmnt)/1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.MotherCultureBatchCount)</b></td>
+        }
+        @if (thFlour == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.FlourAmnt)/1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.FlourBatchCount)</b></td>
+        }
+        @if (thWater == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.WaterAmnt)/1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.WaterBatchCount)</b></td>
+        }
+        @if (thLiquidYeast == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.LiquidYeastAmnt) / 1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.LiquidYeastBatchCount)</b></td>
+        }
+        @if (thMixture == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.MixtureAmnt)/1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.MixtureBatchCount)</b></td>
+        }
+        @if (thGeneric == true)
+        {
+            <td><b>@(Model.Data.Sum(p => p.GenericAmnt)/1000) kg</b></td>
+            <td><b>@Model.Data.Sum(p => p.GenericBatchCount)</b></td>
+        }
+    </tr>
+</table>
+} else { 
+<br>
+    <h3>No data exists for this month</h3> 
+}
