@@ -80,7 +80,7 @@ namespace KneaderPrototype.Handlers
                     relativePath.Substring(1);
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://remote.diosna.cz/" + relativePath + fileName);
                 request.Method = WebRequestMethods.Ftp.DownloadFile;
-                request.Credentials = new NetworkCredential("KneaderPrototype", "Nordit0276","FILESERVER3");
+                request.Credentials = new NetworkCredential("UsersDiosna", "Nordit0276","FILESERVER3");
                 FtpWebResponse response = (FtpWebResponse)request.GetResponse();
                 Stream stream = response.GetResponseStream();
                 MemoryStream ms = new MemoryStream();
@@ -119,7 +119,7 @@ namespace KneaderPrototype.Handlers
             request.KeepAlive = false;
             request.UsePassive = true;
             request.UseBinary = false;
-            request.Credentials = new NetworkCredential("KneaderPrototype", "Nordit0276", "FILESERVER3");
+            request.Credentials = new NetworkCredential("UsersDiosna", "Nordit0276", "FILESERVER3");
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
             Stream stream = response.GetResponseStream();
             StreamReader reader = new StreamReader(stream);
@@ -150,7 +150,7 @@ namespace KneaderPrototype.Handlers
                 request.KeepAlive = false;
                 request.UsePassive = true;
                 request.UseBinary = true;
-                request.Credentials = new NetworkCredential("KneaderPrototype", "Nordit0276", "FILESERVER3");
+                request.Credentials = new NetworkCredential("UsersDiosna", "Nordit0276", "FILESERVER3");
                 Stream requestStream = request.GetRequestStream();
                 requestStream.Write(data, 0, data.Length);
                 requestStream.Close();      

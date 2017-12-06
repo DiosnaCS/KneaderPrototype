@@ -64,7 +64,7 @@ namespace ASP
     string name = string.Empty;
     int EndType = 0;
     int amntTotal = 0;
-    int amntOverall= 0;
+    int amntOverall = 0;
     int amnt = 0;
     string colourRow = "white";
     int count = 0;
@@ -83,14 +83,18 @@ namespace ASP
     int rowDOamountOverall = 0;
     */
     int year = ViewBag.year;
+    int yearOnButtonLeft = year;
+    int yearOnButtonRight = year;
     int monthLess = ViewBag.Month - 1;
     int monthMore = ViewBag.Month + 1;
-    if (monthLess < 1) {
-        year--;
+    if (monthLess < 1)
+    {
+        yearOnButtonLeft--;
         monthLess = 12;
     }
-    if (monthMore > 12) {
-        year++;
+    if (monthMore > 12)
+    {
+        yearOnButtonRight++;
         monthMore = 1;
     }
     ViewHeaderDosingOut dosingOut = null;
@@ -111,30 +115,30 @@ WriteLiteral(">\r\n    <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1340), Tuple.Create("\"", 1377)
-, Tuple.Create(Tuple.Create("", 1347), Tuple.Create("/Report/Month/", 1347), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 1445), Tuple.Create("\"", 1494)
+, Tuple.Create(Tuple.Create("", 1452), Tuple.Create("/Report/Month/", 1452), true)
             
-            #line 50 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 1361), Tuple.Create<System.Object, System.Int32>(monthLess
-            
-            #line default
-            #line hidden
-, 1361), false)
-, Tuple.Create(Tuple.Create("", 1371), Tuple.Create("/", 1371), true)
-            
-            #line 50 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 1372), Tuple.Create<System.Object, System.Int32>(year
+            #line 54 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 1466), Tuple.Create<System.Object, System.Int32>(monthLess
             
             #line default
             #line hidden
-, 1372), false)
+, 1466), false)
+, Tuple.Create(Tuple.Create("", 1476), Tuple.Create("/", 1476), true)
+            
+            #line 54 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 1477), Tuple.Create<System.Object, System.Int32>(yearOnButtonLeft
+            
+            #line default
+            #line hidden
+, 1477), false)
 );
 
 WriteLiteral(">-1 month</a> Month: ");
 
             
-            #line 50 "..\..\Views\Report\calender.cshtml"
-                                                                                       Write(monthName);
+            #line 54 "..\..\Views\Report\calender.cshtml"
+                                                                                                   Write(monthName);
 
             
             #line default
@@ -142,8 +146,8 @@ WriteLiteral(">-1 month</a> Month: ");
 WriteLiteral(" ");
 
             
-            #line 50 "..\..\Views\Report\calender.cshtml"
-                                                                                                  Write(year);
+            #line 54 "..\..\Views\Report\calender.cshtml"
+                                                                                                              Write(year);
 
             
             #line default
@@ -152,23 +156,23 @@ WriteLiteral(" <a");
 
 WriteLiteral(" class=\"btn-primary btn-xs\"");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 1445), Tuple.Create("\"", 1482)
-, Tuple.Create(Tuple.Create("", 1452), Tuple.Create("/Report/Month/", 1452), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 1562), Tuple.Create("\"", 1612)
+, Tuple.Create(Tuple.Create("", 1569), Tuple.Create("/Report/Month/", 1569), true)
             
-            #line 50 "..\..\Views\Report\calender.cshtml"
-                                                                               , Tuple.Create(Tuple.Create("", 1466), Tuple.Create<System.Object, System.Int32>(monthMore
-            
-            #line default
-            #line hidden
-, 1466), false)
-, Tuple.Create(Tuple.Create("", 1476), Tuple.Create("/", 1476), true)
-            
-            #line 50 "..\..\Views\Report\calender.cshtml"
-                                                                                          , Tuple.Create(Tuple.Create("", 1477), Tuple.Create<System.Object, System.Int32>(year
+            #line 54 "..\..\Views\Report\calender.cshtml"
+                                                                                           , Tuple.Create(Tuple.Create("", 1583), Tuple.Create<System.Object, System.Int32>(monthMore
             
             #line default
             #line hidden
-, 1477), false)
+, 1583), false)
+, Tuple.Create(Tuple.Create("", 1593), Tuple.Create("/", 1593), true)
+            
+            #line 54 "..\..\Views\Report\calender.cshtml"
+                                                                                                      , Tuple.Create(Tuple.Create("", 1594), Tuple.Create<System.Object, System.Int32>(yearOnButtonRight
+            
+            #line default
+            #line hidden
+, 1594), false)
 );
 
 WriteLiteral(">+1 month</a>\r\n    <p></p>\r\n</div>\r\n<div");
@@ -185,54 +189,55 @@ WriteLiteral(" type=\"checkbox\"");
 
 WriteLiteral(" onclick=\"hideShowBatches()\"");
 
-WriteLiteral("/>Hide/Show Batches\r\n    </div>\r\n    <div");
+WriteLiteral(" />Hide/Show Batches\r\n    </div>\r\n    <div");
 
 WriteLiteral(" class=\"checkbox-inline big-checkbox\"");
 
-WriteLiteral(">\r\n            <input");
+WriteLiteral(">\r\n        <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
 WriteLiteral(" onclick=\"hideShowDosing()\"");
 
-WriteLiteral(" checked/>Hide/Show Dosing\r\n    </div>\r\n    <div");
+WriteLiteral(" checked />Hide/Show Dosing\r\n    </div>\r\n    <div");
 
 WriteLiteral(" class=\"checkbox-inline big-checkbox\"");
 
-WriteLiteral(">\r\n            <input");
+WriteLiteral(">\r\n        <input");
 
 WriteLiteral(" type=\"checkbox\"");
 
 WriteLiteral(" onclick=\"hideShowCleaning()\"");
 
-WriteLiteral(" checked/>Hide/Show Cleaning\r\n    </div>\r\n</div>\r\n<table");
+WriteLiteral(" checked />Hide/Show Cleaning\r\n    </div>\r\n</div>\r\n<table");
 
 WriteLiteral(" class=\"table-bordered table-condensed\"");
 
-WriteLiteral(">\r\n    <thead>\r\n    <tr>\r\n        <th>Day | Hours</th>\r\n");
+WriteLiteral(">\r\n    <thead>\r\n        <tr>\r\n            <th>Day | Hours</th>\r\n");
 
             
-            #line 68 "..\..\Views\Report\calender.cshtml"
-        
+            #line 72 "..\..\Views\Report\calender.cshtml"
+            
             
             #line default
             #line hidden
             
-            #line 68 "..\..\Views\Report\calender.cshtml"
-         for (int hours = 0;hours<24;hours++) {
+            #line 72 "..\..\Views\Report\calender.cshtml"
+             for (int hours = 0; hours < 24; hours++)
+            {
 
             
             #line default
             #line hidden
-WriteLiteral("            <th");
+WriteLiteral("                <th");
 
 WriteLiteral(" class=\"th-Report\"");
 
 WriteLiteral(">");
 
             
-            #line 69 "..\..\Views\Report\calender.cshtml"
-                             Write(hours);
+            #line 74 "..\..\Views\Report\calender.cshtml"
+                                 Write(hours);
 
             
             #line default
@@ -240,46 +245,46 @@ WriteLiteral(">");
 WriteLiteral("</th>\r\n");
 
             
-            #line 70 "..\..\Views\Report\calender.cshtml"
-        }
+            #line 75 "..\..\Views\Report\calender.cshtml"
+            }
 
             
             #line default
             #line hidden
-WriteLiteral("        <th");
+WriteLiteral("            <th");
 
 WriteLiteral(" style=\"background-color: lightcyan;\"");
 
 WriteLiteral(" title=\"Batches Count\"");
 
-WriteLiteral(">B. cnt.</th>\r\n        <th");
+WriteLiteral(">B. cnt.</th>\r\n            <th");
 
 WriteLiteral(" style=\"background-color: lightcyan;\"");
 
 WriteLiteral(" title=\"Dosing Count\"");
 
-WriteLiteral(">DO. cnt.</th>\r\n        <th");
+WriteLiteral(">DO. cnt.</th>\r\n            <th");
 
 WriteLiteral(" style=\"background-color: lightgray;\"");
 
 WriteLiteral(" title=\"Batches amount\"");
 
-WriteLiteral(">B. amt.</th>       \r\n        <th");
+WriteLiteral(">B. amt.</th>\r\n            <th");
 
 WriteLiteral(" style=\"background-color: lightgray;\"");
 
 WriteLiteral(" title=\"Dosing amount\"");
 
-WriteLiteral(">DO. amt.</th>\r\n    </tr>\r\n    </thead>\r\n");
+WriteLiteral(">DO. amt.</th>\r\n        </tr>\r\n    </thead>\r\n");
 
             
-            #line 77 "..\..\Views\Report\calender.cshtml"
+            #line 82 "..\..\Views\Report\calender.cshtml"
     
             
             #line default
             #line hidden
             
-            #line 77 "..\..\Views\Report\calender.cshtml"
+            #line 82 "..\..\Views\Report\calender.cshtml"
      for (int day = 1; day <= DateTime.DaysInMonth(year, ViewBag.month); day++)
     {
         
@@ -287,40 +292,40 @@ WriteLiteral(">DO. amt.</th>\r\n    </tr>\r\n    </thead>\r\n");
             #line default
             #line hidden
             
-            #line 79 "..\..\Views\Report\calender.cshtml"
+            #line 84 "..\..\Views\Report\calender.cshtml"
            DateTime dayDT = new DateTime(year, ViewBag.month, day); string sDay = dayDT.DayOfWeek.ToString();  
             
             #line default
             #line hidden
             
-            #line 79 "..\..\Views\Report\calender.cshtml"
+            #line 84 "..\..\Views\Report\calender.cshtml"
                                                                                                                 
 
             
             #line default
             #line hidden
-WriteLiteral("        <tr>\r\n");
+WriteLiteral("            <tr>\r\n");
 
             
-            #line 81 "..\..\Views\Report\calender.cshtml"
-            
+            #line 86 "..\..\Views\Report\calender.cshtml"
+                
             
             #line default
             #line hidden
             
-            #line 81 "..\..\Views\Report\calender.cshtml"
-             if (dayDT.DayOfWeek == DayOfWeek.Saturday || dayDT.DayOfWeek == DayOfWeek.Sunday)
-            {
-                colourRow = "lightgoldenrodyellow";
+            #line 86 "..\..\Views\Report\calender.cshtml"
+                 if (dayDT.DayOfWeek == DayOfWeek.Saturday || dayDT.DayOfWeek == DayOfWeek.Sunday)
+                {
+                    colourRow = "lightgoldenrodyellow";
 
             
             #line default
             #line hidden
-WriteLiteral("                <td>");
+WriteLiteral("                    <td>");
 
             
-            #line 84 "..\..\Views\Report\calender.cshtml"
-               Write(day);
+            #line 89 "..\..\Views\Report\calender.cshtml"
+                   Write(day);
 
             
             #line default
@@ -328,8 +333,8 @@ WriteLiteral("                <td>");
 WriteLiteral(". ");
 
             
-            #line 84 "..\..\Views\Report\calender.cshtml"
-                     Write(sDay);
+            #line 89 "..\..\Views\Report\calender.cshtml"
+                         Write(sDay);
 
             
             #line default
@@ -337,19 +342,20 @@ WriteLiteral(". ");
 WriteLiteral("</td>\r\n");
 
             
-            #line 85 "..\..\Views\Report\calender.cshtml"
-            } else
-            {
-                colourRow = "white";
+            #line 90 "..\..\Views\Report\calender.cshtml"
+                }
+                else
+                {
+                    colourRow = "white";
 
             
             #line default
             #line hidden
-WriteLiteral("                <td>");
+WriteLiteral("                    <td>");
 
             
-            #line 88 "..\..\Views\Report\calender.cshtml"
-               Write(day);
+            #line 94 "..\..\Views\Report\calender.cshtml"
+                   Write(day);
 
             
             #line default
@@ -357,95 +363,98 @@ WriteLiteral("                <td>");
 WriteLiteral(". ");
 
             
-            #line 88 "..\..\Views\Report\calender.cshtml"
-                     Write(sDay);
+            #line 94 "..\..\Views\Report\calender.cshtml"
+                         Write(sDay);
 
             
             #line default
             #line hidden
-WriteLiteral("</td>            \r\n");
+WriteLiteral("</td>\r\n");
 
             
-            #line 89 "..\..\Views\Report\calender.cshtml"
-            }
-
-            
-            #line default
-            #line hidden
-WriteLiteral("           ");
-
-            
-            #line 90 "..\..\Views\Report\calender.cshtml"
-            for (int hour = 0; hour < 24; hour++)
-           {
-               List<ViewHeaderBatch> batches = new List<ViewHeaderBatch>();
-               int latestBatchNo = 0;
-               name = string.Empty;
-               if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour))
-               {
-                   var data = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType != Operations.DosingOut);
-                   foreach (var batch in data)
-                   {
-                       if (batch.Need != 0)
-                       {
-                           amnt = batch.Need / 1000;
-                           amntTotal += amnt;
-                       }
-                       if (batch.BatchNo != latestBatchNo && (batch.RecordType == Operations.RecipeStart))
-                       {
-
-                           batches.Add(new ViewHeaderBatch() { Name = batch.Destination, BatchNo = batch.BatchNo, AmntTotal = amnt, RecipeNo = batch.Variant1});
-                           count++;
-                       }
-                       latestBatchNo = batch.BatchNo;
-                   }
-               }
-               if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut))
-               {
-                   dosingOutCount = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut).Count();
-                   dosingOutAmountSum = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut).Sum(p => p.Actual);
-                   dosingOut = new ViewHeaderDosingOut { hour = hour, count = dosingOutCount, amountSum = dosingOutAmountSum};
-               }
-               if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && (p.RecordType == Operations.FermenterCleaning || p.RecordType == Operations.PipWorkCleaning || p.RecordType == Operations.YeastCleaning)))
-               {
-                   var cleanings = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && (p.RecordType == Operations.FermenterCleaning || p.RecordType == Operations.PipWorkCleaning || p.RecordType == Operations.YeastCleaning));
-                   foreach (var cleanOp in cleanings) {
-                       if (cleanOp.RecordType == Operations.Pigging) {
-                           cleaning = new ViewHeaderCleaning { cleaning = cleanOp.RecordType.ToString(), destination = cleanOp.Destination, BatchNo = cleanOp.BatchNo, ClnType = ClnType.none, StartedBy = (StartedBy)cleanOp.Variant2 };
-                       }
-                       else {
-                           cleaning = new ViewHeaderCleaning { cleaning = cleanOp.RecordType.ToString(), destination = cleanOp.Destination, BatchNo = cleanOp.BatchNo, ClnType = (ClnType)cleanOp.Variant1, StartedBy = (StartedBy)cleanOp.Variant2 };
-                       }
-                   }
-               }
+            #line 95 "..\..\Views\Report\calender.cshtml"
+                }
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                ");
 
-WriteAttribute("style", Tuple.Create(" style=\"", 6228), Tuple.Create("\"", 6264)
-, Tuple.Create(Tuple.Create("", 6236), Tuple.Create("background-color:", 6236), true)
             
-            #line 132 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create(" ", 6253), Tuple.Create<System.Object, System.Int32>(colourRow
+            #line 96 "..\..\Views\Report\calender.cshtml"
+                 for (int hour = 0; hour < 24; hour++)
+                {
+                    List<ViewHeaderBatch> batches = new List<ViewHeaderBatch>();
+                    int latestBatchNo = 0;
+                    name = string.Empty;
+                    if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour))
+                    {
+                        var data = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType != Operations.DosingOut);
+                        foreach (var batch in data)
+                        {
+                            if (batch.Need != 0)
+                            {
+                                amnt = batch.Need / 1000;
+                                amntTotal += amnt;
+                            }
+                            if (batch.BatchNo != latestBatchNo && (batch.RecordType == Operations.RecipeStart))
+                            {
+
+                                batches.Add(new ViewHeaderBatch() { Name = batch.Destination, BatchNo = batch.BatchNo, AmntTotal = amnt, RecipeNo = batch.Variant1 });
+                                count++;
+                            }
+                            latestBatchNo = batch.BatchNo;
+                        }
+                    }
+                    if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut))
+                    {
+                        dosingOutCount = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut).Count();
+                        dosingOutAmountSum = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && p.RecordType == Operations.DosingOut).Sum(p => p.Actual);
+                        dosingOut = new ViewHeaderDosingOut { hour = hour, count = dosingOutCount, amountSum = dosingOutAmountSum };
+                    }
+                    if (Model.Data.Exists(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && (p.RecordType == Operations.FermenterCleaning || p.RecordType == Operations.PipWorkCleaning || p.RecordType == Operations.YeastCleaning)))
+                    {
+                        var cleanings = Model.Data.Where(p => p.TimeStart.Day == day && p.TimeStart.Hour == hour && (p.RecordType == Operations.FermenterCleaning || p.RecordType == Operations.PipWorkCleaning || p.RecordType == Operations.YeastCleaning));
+                        foreach (var cleanOp in cleanings)
+                        {
+                            if (cleanOp.RecordType == Operations.Pigging)
+                            {
+                                cleaning = new ViewHeaderCleaning { cleaning = cleanOp.RecordType.ToString(), destination = cleanOp.Destination, BatchNo = cleanOp.BatchNo, ClnType = ClnType.none, StartedBy = (StartedBy)cleanOp.Variant2 };
+                            }
+                            else
+                            {
+                                cleaning = new ViewHeaderCleaning { cleaning = cleanOp.RecordType.ToString(), destination = cleanOp.Destination, BatchNo = cleanOp.BatchNo, ClnType = (ClnType)cleanOp.Variant1, StartedBy = (StartedBy)cleanOp.Variant2 };
+                            }
+                        }
+                    }
+
             
             #line default
             #line hidden
-, 6254), false)
+WriteLiteral("                    <td");
+
+WriteAttribute("style", Tuple.Create(" style=\"", 6742), Tuple.Create("\"", 6778)
+, Tuple.Create(Tuple.Create("", 6750), Tuple.Create("background-color:", 6750), true)
+            
+            #line 141 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create(" ", 6767), Tuple.Create<System.Object, System.Int32>(colourRow
+            
+            #line default
+            #line hidden
+, 6768), false)
 );
 
 WriteLiteral(">\r\n");
 
             
-            #line 133 "..\..\Views\Report\calender.cshtml"
-                    
+            #line 142 "..\..\Views\Report\calender.cshtml"
+                        
             
             #line default
             #line hidden
             
-            #line 133 "..\..\Views\Report\calender.cshtml"
-                     foreach (var batch in batches)
+            #line 142 "..\..\Views\Report\calender.cshtml"
+                         foreach (var batch in batches)
                     {
                         if (Model.Data.Exists(p => p.BatchNo == batch.BatchNo && p.RecordType == Operations.RecipeEnd))
                         {
@@ -458,57 +467,57 @@ WriteLiteral(">\r\n");
             
             #line default
             #line hidden
-WriteLiteral("                            <b><a");
+WriteLiteral("                                <b><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 6856), Tuple.Create("\"", 6892)
-, Tuple.Create(Tuple.Create("", 6863), Tuple.Create("/Report/Detail/", 6863), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 7378), Tuple.Create("\"", 7414)
+, Tuple.Create(Tuple.Create("", 7385), Tuple.Create("/Report/Detail/", 7385), true)
             
-            #line 142 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 6878), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
+            #line 151 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 7400), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
             
             #line default
             #line hidden
-, 6878), false)
+, 7400), false)
 );
 
 WriteLiteral(" class=\"batch\"");
 
 WriteLiteral(" style=\"color: darkgreen;\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 6933), Tuple.Create("\"", 7022)
-, Tuple.Create(Tuple.Create("", 6941), Tuple.Create("Batch:", 6941), true)
+WriteAttribute("title", Tuple.Create(" title=\"", 7455), Tuple.Create("\"", 7544)
+, Tuple.Create(Tuple.Create("", 7463), Tuple.Create("Batch:", 7463), true)
             
-            #line 142 "..\..\Views\Report\calender.cshtml"
-                                            , Tuple.Create(Tuple.Create(" ", 6947), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
-            
-            #line default
-            #line hidden
-, 6948), false)
-, Tuple.Create(Tuple.Create("  ", 6962), Tuple.Create("Recipe:", 6964), true)
-            
-            #line 142 "..\..\Views\Report\calender.cshtml"
-                                                                    , Tuple.Create(Tuple.Create(" ", 6971), Tuple.Create<System.Object, System.Int32>(batch.RecipeNo
+            #line 151 "..\..\Views\Report\calender.cshtml"
+                                                , Tuple.Create(Tuple.Create(" ", 7469), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
             
             #line default
             #line hidden
-, 6972), false)
-, Tuple.Create(Tuple.Create(" ", 6987), Tuple.Create("Filled", 6988), true)
-, Tuple.Create(Tuple.Create(" ", 6994), Tuple.Create("amount:", 6995), true)
+, 7470), false)
+, Tuple.Create(Tuple.Create("  ", 7484), Tuple.Create("Recipe:", 7486), true)
             
-            #line 142 "..\..\Views\Report\calender.cshtml"
-                                                                                                   , Tuple.Create(Tuple.Create(" ", 7002), Tuple.Create<System.Object, System.Int32>(batch.AmntTotal
+            #line 151 "..\..\Views\Report\calender.cshtml"
+                                                                        , Tuple.Create(Tuple.Create(" ", 7493), Tuple.Create<System.Object, System.Int32>(batch.RecipeNo
             
             #line default
             #line hidden
-, 7003), false)
-, Tuple.Create(Tuple.Create(" ", 7019), Tuple.Create("kg", 7020), true)
+, 7494), false)
+, Tuple.Create(Tuple.Create(" ", 7509), Tuple.Create("Filled", 7510), true)
+, Tuple.Create(Tuple.Create(" ", 7516), Tuple.Create("amount:", 7517), true)
+            
+            #line 151 "..\..\Views\Report\calender.cshtml"
+                                                                                                       , Tuple.Create(Tuple.Create(" ", 7524), Tuple.Create<System.Object, System.Int32>(batch.AmntTotal
+            
+            #line default
+            #line hidden
+, 7525), false)
+, Tuple.Create(Tuple.Create(" ", 7541), Tuple.Create("kg", 7542), true)
 );
 
 WriteLiteral(">");
 
             
-            #line 142 "..\..\Views\Report\calender.cshtml"
-                                                                                                                                                                                                    Write(batch.Name);
+            #line 151 "..\..\Views\Report\calender.cshtml"
+                                                                                                                                                                                                        Write(batch.Name);
 
             
             #line default
@@ -516,63 +525,63 @@ WriteLiteral(">");
 WriteLiteral("</a></b>\r\n");
 
             
-            #line 143 "..\..\Views\Report\calender.cshtml"
-                        }
-                        else
-                        {
+            #line 152 "..\..\Views\Report\calender.cshtml"
+                            }
+                            else
+                            {
 
             
             #line default
             #line hidden
-WriteLiteral("                            <b><a");
+WriteLiteral("                                <b><a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 7162), Tuple.Create("\"", 7198)
-, Tuple.Create(Tuple.Create("", 7169), Tuple.Create("/Report/Detail/", 7169), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 7700), Tuple.Create("\"", 7736)
+, Tuple.Create(Tuple.Create("", 7707), Tuple.Create("/Report/Detail/", 7707), true)
             
-            #line 146 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7184), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
+            #line 155 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 7722), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
             
             #line default
             #line hidden
-, 7184), false)
+, 7722), false)
 );
 
 WriteLiteral(" class=\"batch\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 7213), Tuple.Create("\"", 7302)
-, Tuple.Create(Tuple.Create("", 7221), Tuple.Create("Batch:", 7221), true)
+WriteAttribute("title", Tuple.Create(" title=\"", 7751), Tuple.Create("\"", 7840)
+, Tuple.Create(Tuple.Create("", 7759), Tuple.Create("Batch:", 7759), true)
             
-            #line 146 "..\..\Views\Report\calender.cshtml"
-                  , Tuple.Create(Tuple.Create(" ", 7227), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
-            
-            #line default
-            #line hidden
-, 7228), false)
-, Tuple.Create(Tuple.Create("  ", 7242), Tuple.Create("Recipe:", 7244), true)
-            
-            #line 146 "..\..\Views\Report\calender.cshtml"
-                                          , Tuple.Create(Tuple.Create(" ", 7251), Tuple.Create<System.Object, System.Int32>(batch.RecipeNo
+            #line 155 "..\..\Views\Report\calender.cshtml"
+                      , Tuple.Create(Tuple.Create(" ", 7765), Tuple.Create<System.Object, System.Int32>(batch.BatchNo
             
             #line default
             #line hidden
-, 7252), false)
-, Tuple.Create(Tuple.Create(" ", 7267), Tuple.Create("Filled", 7268), true)
-, Tuple.Create(Tuple.Create(" ", 7274), Tuple.Create("amount:", 7275), true)
+, 7766), false)
+, Tuple.Create(Tuple.Create("  ", 7780), Tuple.Create("Recipe:", 7782), true)
             
-            #line 146 "..\..\Views\Report\calender.cshtml"
-                                                                         , Tuple.Create(Tuple.Create(" ", 7282), Tuple.Create<System.Object, System.Int32>(batch.AmntTotal
+            #line 155 "..\..\Views\Report\calender.cshtml"
+                                              , Tuple.Create(Tuple.Create(" ", 7789), Tuple.Create<System.Object, System.Int32>(batch.RecipeNo
             
             #line default
             #line hidden
-, 7283), false)
-, Tuple.Create(Tuple.Create(" ", 7299), Tuple.Create("kg", 7300), true)
+, 7790), false)
+, Tuple.Create(Tuple.Create(" ", 7805), Tuple.Create("Filled", 7806), true)
+, Tuple.Create(Tuple.Create(" ", 7812), Tuple.Create("amount:", 7813), true)
+            
+            #line 155 "..\..\Views\Report\calender.cshtml"
+                                                                             , Tuple.Create(Tuple.Create(" ", 7820), Tuple.Create<System.Object, System.Int32>(batch.AmntTotal
+            
+            #line default
+            #line hidden
+, 7821), false)
+, Tuple.Create(Tuple.Create(" ", 7837), Tuple.Create("kg", 7838), true)
 );
 
 WriteLiteral(">");
 
             
-            #line 146 "..\..\Views\Report\calender.cshtml"
-                                                                                                                                                                          Write(batch.Name);
+            #line 155 "..\..\Views\Report\calender.cshtml"
+                                                                                                                                                                              Write(batch.Name);
 
             
             #line default
@@ -580,72 +589,72 @@ WriteLiteral(">");
 WriteLiteral("</a></b>\r\n");
 
             
-            #line 147 "..\..\Views\Report\calender.cshtml"
+            #line 156 "..\..\Views\Report\calender.cshtml"
+                            }
                         }
-                    }
 
             
             #line default
             #line hidden
-WriteLiteral("                    ");
+WriteLiteral("                        ");
 
             
-            #line 149 "..\..\Views\Report\calender.cshtml"
-                     if (dosingOut != null)
+            #line 158 "..\..\Views\Report\calender.cshtml"
+                         if (dosingOut != null)
                     {
 
             
             #line default
             #line hidden
-WriteLiteral("                        <a");
+WriteLiteral("                            <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 7469), Tuple.Create("\"", 7519)
-, Tuple.Create(Tuple.Create("", 7476), Tuple.Create("/ReportDosing/Day/", 7476), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 8023), Tuple.Create("\"", 8073)
+, Tuple.Create(Tuple.Create("", 8030), Tuple.Create("/ReportDosing/Day/", 8030), true)
             
-            #line 151 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7494), Tuple.Create<System.Object, System.Int32>(day
-            
-            #line default
-            #line hidden
-, 7494), false)
-, Tuple.Create(Tuple.Create("", 7498), Tuple.Create("/", 7498), true)
-            
-            #line 151 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7499), Tuple.Create<System.Object, System.Int32>(ViewBag.Month
+            #line 160 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8048), Tuple.Create<System.Object, System.Int32>(day
             
             #line default
             #line hidden
-, 7499), false)
-, Tuple.Create(Tuple.Create("", 7513), Tuple.Create("/", 7513), true)
+, 8048), false)
+, Tuple.Create(Tuple.Create("", 8052), Tuple.Create("/", 8052), true)
             
-            #line 151 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7514), Tuple.Create<System.Object, System.Int32>(year
+            #line 160 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8053), Tuple.Create<System.Object, System.Int32>(ViewBag.Month
             
             #line default
             #line hidden
-, 7514), false)
+, 8053), false)
+, Tuple.Create(Tuple.Create("", 8067), Tuple.Create("/", 8067), true)
+            
+            #line 160 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8068), Tuple.Create<System.Object, System.Int32>(year
+            
+            #line default
+            #line hidden
+, 8068), false)
 );
 
 WriteLiteral(" class=\"dosing\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 7535), Tuple.Create("\"", 7587)
-, Tuple.Create(Tuple.Create("", 7543), Tuple.Create("Total", 7543), true)
-, Tuple.Create(Tuple.Create(" ", 7548), Tuple.Create("Amount:", 7549), true)
+WriteAttribute("title", Tuple.Create(" title=\"", 8089), Tuple.Create("\"", 8141)
+, Tuple.Create(Tuple.Create("", 8097), Tuple.Create("Total", 8097), true)
+, Tuple.Create(Tuple.Create(" ", 8102), Tuple.Create("Amount:", 8103), true)
             
-            #line 151 "..\..\Views\Report\calender.cshtml"
-                                  , Tuple.Create(Tuple.Create(" ", 7556), Tuple.Create<System.Object, System.Int32>(dosingOut.amountSum/1000
+            #line 160 "..\..\Views\Report\calender.cshtml"
+                                      , Tuple.Create(Tuple.Create(" ", 8110), Tuple.Create<System.Object, System.Int32>(dosingOut.amountSum/1000
             
             #line default
             #line hidden
-, 7557), false)
-, Tuple.Create(Tuple.Create(" ", 7584), Tuple.Create("kg", 7585), true)
+, 8111), false)
+, Tuple.Create(Tuple.Create(" ", 8138), Tuple.Create("kg", 8139), true)
 );
 
 WriteLiteral(">(<b>");
 
             
-            #line 151 "..\..\Views\Report\calender.cshtml"
-                                                                                                                                                 Write(dosingOut.count);
+            #line 160 "..\..\Views\Report\calender.cshtml"
+                                                                                                                                                     Write(dosingOut.count);
 
             
             #line default
@@ -653,90 +662,90 @@ WriteLiteral(">(<b>");
 WriteLiteral("</b>)</a>\r\n");
 
             
-            #line 152 "..\..\Views\Report\calender.cshtml"
-                        rowDOcount += dosingOut.count;
-                        rowDOamount += (dosingOut.amountSum/1000);
-                        dosingOut = null;
-                    }
+            #line 161 "..\..\Views\Report\calender.cshtml"
+                            rowDOcount += dosingOut.count;
+                            rowDOamount += (dosingOut.amountSum / 1000);
+                            dosingOut = null;
+                        }
 
             
             #line default
             #line hidden
-WriteLiteral("                    ");
+WriteLiteral("                        ");
 
             
-            #line 156 "..\..\Views\Report\calender.cshtml"
-                     if (cleaning != null)
+            #line 165 "..\..\Views\Report\calender.cshtml"
+                         if (cleaning != null)
                     {
 
             
             #line default
             #line hidden
-WriteLiteral("                        <a");
+WriteLiteral("                            <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 7903), Tuple.Create("\"", 7955)
-, Tuple.Create(Tuple.Create("", 7910), Tuple.Create("/ReportCleaning/Day/", 7910), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 8483), Tuple.Create("\"", 8535)
+, Tuple.Create(Tuple.Create("", 8490), Tuple.Create("/ReportCleaning/Day/", 8490), true)
             
-            #line 158 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7930), Tuple.Create<System.Object, System.Int32>(day
-            
-            #line default
-            #line hidden
-, 7930), false)
-, Tuple.Create(Tuple.Create("", 7934), Tuple.Create("/", 7934), true)
-            
-            #line 158 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7935), Tuple.Create<System.Object, System.Int32>(ViewBag.Month
+            #line 167 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8510), Tuple.Create<System.Object, System.Int32>(day
             
             #line default
             #line hidden
-, 7935), false)
-, Tuple.Create(Tuple.Create("", 7949), Tuple.Create("/", 7949), true)
+, 8510), false)
+, Tuple.Create(Tuple.Create("", 8514), Tuple.Create("/", 8514), true)
             
-            #line 158 "..\..\Views\Report\calender.cshtml"
-, Tuple.Create(Tuple.Create("", 7950), Tuple.Create<System.Object, System.Int32>(year
+            #line 167 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8515), Tuple.Create<System.Object, System.Int32>(ViewBag.Month
             
             #line default
             #line hidden
-, 7950), false)
+, 8515), false)
+, Tuple.Create(Tuple.Create("", 8529), Tuple.Create("/", 8529), true)
+            
+            #line 167 "..\..\Views\Report\calender.cshtml"
+, Tuple.Create(Tuple.Create("", 8530), Tuple.Create<System.Object, System.Int32>(year
+            
+            #line default
+            #line hidden
+, 8530), false)
 );
 
 WriteLiteral(" class=\"cleaning\"");
 
-WriteAttribute("title", Tuple.Create(" title=\"", 7973), Tuple.Create("\"", 8093)
-, Tuple.Create(Tuple.Create("", 7981), Tuple.Create("Cleaning:", 7981), true)
+WriteAttribute("title", Tuple.Create(" title=\"", 8553), Tuple.Create("\"", 8673)
+, Tuple.Create(Tuple.Create("", 8561), Tuple.Create("Cleaning:", 8561), true)
             
-            #line 158 "..\..\Views\Report\calender.cshtml"
-                                 , Tuple.Create(Tuple.Create(" ", 7990), Tuple.Create<System.Object, System.Int32>(cleaning.cleaning
-            
-            #line default
-            #line hidden
-, 7991), false)
-, Tuple.Create(Tuple.Create(" ", 8009), Tuple.Create("Clean", 8010), true)
-, Tuple.Create(Tuple.Create(" ", 8015), Tuple.Create("Type:", 8016), true)
-            
-            #line 158 "..\..\Views\Report\calender.cshtml"
-                                                                , Tuple.Create(Tuple.Create(" ", 8021), Tuple.Create<System.Object, System.Int32>(cleaning.ClnType.ToString()
+            #line 167 "..\..\Views\Report\calender.cshtml"
+                                     , Tuple.Create(Tuple.Create(" ", 8570), Tuple.Create<System.Object, System.Int32>(cleaning.cleaning
             
             #line default
             #line hidden
-, 8022), false)
-, Tuple.Create(Tuple.Create(" ", 8050), Tuple.Create("Started", 8051), true)
-, Tuple.Create(Tuple.Create(" ", 8058), Tuple.Create("By:", 8059), true)
+, 8571), false)
+, Tuple.Create(Tuple.Create(" ", 8589), Tuple.Create("Clean", 8590), true)
+, Tuple.Create(Tuple.Create(" ", 8595), Tuple.Create("Type:", 8596), true)
             
-            #line 158 "..\..\Views\Report\calender.cshtml"
-                                                                                                         , Tuple.Create(Tuple.Create(" ", 8062), Tuple.Create<System.Object, System.Int32>(cleaning.StartedBy.ToString()
+            #line 167 "..\..\Views\Report\calender.cshtml"
+                                                                    , Tuple.Create(Tuple.Create(" ", 8601), Tuple.Create<System.Object, System.Int32>(cleaning.ClnType.ToString()
             
             #line default
             #line hidden
-, 8063), false)
+, 8602), false)
+, Tuple.Create(Tuple.Create(" ", 8630), Tuple.Create("Started", 8631), true)
+, Tuple.Create(Tuple.Create(" ", 8638), Tuple.Create("By:", 8639), true)
+            
+            #line 167 "..\..\Views\Report\calender.cshtml"
+                                                                                                             , Tuple.Create(Tuple.Create(" ", 8642), Tuple.Create<System.Object, System.Int32>(cleaning.StartedBy.ToString()
+            
+            #line default
+            #line hidden
+, 8643), false)
 );
 
 WriteLiteral(">[<b>");
 
             
-            #line 158 "..\..\Views\Report\calender.cshtml"
-                                                                                                                                                                                                                         Write(cleaning.destination);
+            #line 167 "..\..\Views\Report\calender.cshtml"
+                                                                                                                                                                                                                             Write(cleaning.destination);
 
             
             #line default
@@ -744,41 +753,41 @@ WriteLiteral(">[<b>");
 WriteLiteral("</b>]</a>\r\n");
 
             
-            #line 159 "..\..\Views\Report\calender.cshtml"
-                        cleaning = null;
-                    }
+            #line 168 "..\..\Views\Report\calender.cshtml"
+                            cleaning = null;
+                        }
 
             
             #line default
             #line hidden
-WriteLiteral("                </td>\r\n");
+WriteLiteral("                    </td>\r\n");
 
             
-            #line 162 "..\..\Views\Report\calender.cshtml"
-           }
-
-            
-            #line default
-            #line hidden
-WriteLiteral("            ");
-
-            
-            #line 163 "..\..\Views\Report\calender.cshtml"
-             if (count != 0)
-            {
+            #line 171 "..\..\Views\Report\calender.cshtml"
+                }
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                ");
 
-WriteLiteral("  style=\"background-color: lightcyan; text-align: center;\"");
+            
+            #line 172 "..\..\Views\Report\calender.cshtml"
+                 if (count != 0)
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <td");
+
+WriteLiteral(" style=\"background-color: lightcyan; text-align: center;\"");
 
 WriteLiteral(">");
 
             
-            #line 165 "..\..\Views\Report\calender.cshtml"
-                                                                         Write(count);
+            #line 174 "..\..\Views\Report\calender.cshtml"
+                                                                            Write(count);
 
             
             #line default
@@ -786,58 +795,60 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 166 "..\..\Views\Report\calender.cshtml"
-            } else {
+            #line 175 "..\..\Views\Report\calender.cshtml"
+                }
+                else
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                    <td");
 
 WriteLiteral(" style=\"background-color: lightcyan; text-align: center;\"");
 
 WriteLiteral("></td>\r\n");
 
             
-            #line 168 "..\..\Views\Report\calender.cshtml"
-            }
+            #line 179 "..\..\Views\Report\calender.cshtml"
+                }
 
             
             #line default
             #line hidden
-WriteLiteral("            ");
+WriteLiteral("                ");
 
             
-            #line 169 "..\..\Views\Report\calender.cshtml"
-              countOverall += count; count = 0; 
+            #line 180 "..\..\Views\Report\calender.cshtml"
+                  countOverall += count; count = 0; 
             
             #line default
             #line hidden
 WriteLiteral("\r\n");
 
             
-            #line 170 "..\..\Views\Report\calender.cshtml"
-            
+            #line 181 "..\..\Views\Report\calender.cshtml"
+                
             
             #line default
             #line hidden
             
-            #line 170 "..\..\Views\Report\calender.cshtml"
-             if (rowDOcount != 0)
-            {
+            #line 181 "..\..\Views\Report\calender.cshtml"
+                 if (rowDOcount != 0)
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                    <td");
 
 WriteLiteral(" style=\"background-color: lightcyan; text-align: center; \"");
 
 WriteLiteral(">");
 
             
-            #line 172 "..\..\Views\Report\calender.cshtml"
-                                                                         Write(rowDOcount);
+            #line 183 "..\..\Views\Report\calender.cshtml"
+                                                                             Write(rowDOcount);
 
             
             #line default
@@ -845,160 +856,162 @@ WriteLiteral(">");
 WriteLiteral("</td>\r\n");
 
             
-            #line 173 "..\..\Views\Report\calender.cshtml"
-            }
-            else
-            {
+            #line 184 "..\..\Views\Report\calender.cshtml"
+                }
+                else
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                    <td");
 
 WriteLiteral(" style=\"background-color: lightcyan; text-align: center;\"");
 
 WriteLiteral("></td>\r\n");
 
             
-            #line 177 "..\..\Views\Report\calender.cshtml"
-            }
-
-            
-            #line default
-            #line hidden
-WriteLiteral("            ");
-
-            
-            #line 178 "..\..\Views\Report\calender.cshtml"
-               rowDOcountOverall += rowDOcount; rowDOcount = 0; 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-            
-            #line 179 "..\..\Views\Report\calender.cshtml"
-            
-            
-            #line default
-            #line hidden
-            
-            #line 179 "..\..\Views\Report\calender.cshtml"
-             if (amntTotal != 0)
-            {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("                <td");
-
-WriteLiteral(" style=\"background-color: lightgray; text-align: center; \"");
-
-WriteLiteral(">");
-
-            
-            #line 181 "..\..\Views\Report\calender.cshtml"
-                                                                         Write(amntTotal);
-
-            
-            #line default
-            #line hidden
-WriteLiteral(" kg</td>\r\n");
-
-            
-            #line 182 "..\..\Views\Report\calender.cshtml"
-            } else {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("                <td");
-
-WriteLiteral(" style=\"background-color: lightgray; text-align: center;\"");
-
-WriteLiteral("></td>\r\n");
-
-            
-            #line 184 "..\..\Views\Report\calender.cshtml"
-            }
-
-            
-            #line default
-            #line hidden
-WriteLiteral("            ");
-
-            
-            #line 185 "..\..\Views\Report\calender.cshtml"
-              amntOverall += amntTotal; amntTotal = 0; 
-            
-            #line default
-            #line hidden
-WriteLiteral("\r\n");
-
-            
-            #line 186 "..\..\Views\Report\calender.cshtml"
-            
-            
-            #line default
-            #line hidden
-            
-            #line 186 "..\..\Views\Report\calender.cshtml"
-             if (rowDOamount != 0)
-            {
-
-            
-            #line default
-            #line hidden
-WriteLiteral("                <td");
-
-WriteLiteral(" style=\"background-color: lightgray; text-align: center; \"");
-
-WriteLiteral(">");
-
-            
             #line 188 "..\..\Views\Report\calender.cshtml"
-                                                                         Write(rowDOamount);
+                }
 
             
             #line default
             #line hidden
-WriteLiteral(" kg</td>\r\n");
+WriteLiteral("                ");
 
             
             #line 189 "..\..\Views\Report\calender.cshtml"
-            }
-            else
-            {
+                   rowDOcountOverall += rowDOcount; rowDOcount = 0; 
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n");
+
+            
+            #line 190 "..\..\Views\Report\calender.cshtml"
+                
+            
+            #line default
+            #line hidden
+            
+            #line 190 "..\..\Views\Report\calender.cshtml"
+                 if (amntTotal != 0)
+                {
 
             
             #line default
             #line hidden
-WriteLiteral("                <td");
+WriteLiteral("                    <td");
+
+WriteLiteral(" style=\"background-color: lightgray; text-align: center; \"");
+
+WriteLiteral(">");
+
+            
+            #line 192 "..\..\Views\Report\calender.cshtml"
+                                                                             Write(amntTotal);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" kg</td>\r\n");
+
+            
+            #line 193 "..\..\Views\Report\calender.cshtml"
+                }
+                else
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <td");
 
 WriteLiteral(" style=\"background-color: lightgray; text-align: center;\"");
 
 WriteLiteral("></td>\r\n");
 
             
-            #line 193 "..\..\Views\Report\calender.cshtml"
-            }
+            #line 197 "..\..\Views\Report\calender.cshtml"
+                }
 
             
             #line default
             #line hidden
-WriteLiteral("            ");
+WriteLiteral("                ");
 
             
-            #line 194 "..\..\Views\Report\calender.cshtml"
-               rowDOamountOverall += rowDOamount; rowDOamount = 0; 
+            #line 198 "..\..\Views\Report\calender.cshtml"
+                  amntOverall += amntTotal; amntTotal = 0; 
             
             #line default
             #line hidden
-WriteLiteral("\r\n        </tr>\r\n");
+WriteLiteral("\r\n");
 
             
-            #line 196 "..\..\Views\Report\calender.cshtml"
-    }
+            #line 199 "..\..\Views\Report\calender.cshtml"
+                
+            
+            #line default
+            #line hidden
+            
+            #line 199 "..\..\Views\Report\calender.cshtml"
+                 if (rowDOamount != 0)
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <td");
+
+WriteLiteral(" style=\"background-color: lightgray; text-align: center; \"");
+
+WriteLiteral(">");
+
+            
+            #line 201 "..\..\Views\Report\calender.cshtml"
+                                                                             Write(rowDOamount);
+
+            
+            #line default
+            #line hidden
+WriteLiteral(" kg</td>\r\n");
+
+            
+            #line 202 "..\..\Views\Report\calender.cshtml"
+                }
+                else
+                {
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                    <td");
+
+WriteLiteral(" style=\"background-color: lightgray; text-align: center;\"");
+
+WriteLiteral("></td>\r\n");
+
+            
+            #line 206 "..\..\Views\Report\calender.cshtml"
+                }
+
+            
+            #line default
+            #line hidden
+WriteLiteral("                ");
+
+            
+            #line 207 "..\..\Views\Report\calender.cshtml"
+                   rowDOamountOverall += rowDOamount; rowDOamount = 0; 
+            
+            #line default
+            #line hidden
+WriteLiteral("\r\n            </tr>\r\n");
+
+            
+            #line 209 "..\..\Views\Report\calender.cshtml"
+                    }
 
             
             #line default
@@ -1006,13 +1019,13 @@ WriteLiteral("\r\n        </tr>\r\n");
 WriteLiteral("    <tr>\r\n        <td><b>Total</b></td>\r\n");
 
             
-            #line 199 "..\..\Views\Report\calender.cshtml"
+            #line 212 "..\..\Views\Report\calender.cshtml"
         
             
             #line default
             #line hidden
             
-            #line 199 "..\..\Views\Report\calender.cshtml"
+            #line 212 "..\..\Views\Report\calender.cshtml"
          for (int hours = 0; hours < 24; hours++)
         {
 
@@ -1026,7 +1039,7 @@ WriteLiteral(" class=\"th-Report\"");
 WriteLiteral("></td>\r\n");
 
             
-            #line 202 "..\..\Views\Report\calender.cshtml"
+            #line 215 "..\..\Views\Report\calender.cshtml"
         }
 
             
@@ -1039,7 +1052,7 @@ WriteLiteral(" style=\"text-align: center;\"");
 WriteLiteral("><b>");
 
             
-            #line 203 "..\..\Views\Report\calender.cshtml"
+            #line 216 "..\..\Views\Report\calender.cshtml"
                                       Write(countOverall);
 
             
@@ -1052,7 +1065,7 @@ WriteLiteral(" style=\"text-align: center;\"");
 WriteLiteral("><b>");
 
             
-            #line 204 "..\..\Views\Report\calender.cshtml"
+            #line 217 "..\..\Views\Report\calender.cshtml"
                                       Write(rowDOcountOverall);
 
             
@@ -1065,7 +1078,7 @@ WriteLiteral(" style=\"text-align: center;\"");
 WriteLiteral("><b>");
 
             
-            #line 205 "..\..\Views\Report\calender.cshtml"
+            #line 218 "..\..\Views\Report\calender.cshtml"
                                       Write(amntOverall);
 
             
@@ -1078,7 +1091,7 @@ WriteLiteral(" style=\"text-align: center;\"");
 WriteLiteral("><b>");
 
             
-            #line 206 "..\..\Views\Report\calender.cshtml"
+            #line 219 "..\..\Views\Report\calender.cshtml"
                                       Write(rowDOamountOverall);
 
             
