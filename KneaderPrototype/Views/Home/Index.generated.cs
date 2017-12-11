@@ -76,7 +76,7 @@ WriteLiteral("\r\n<h2>Welcome to Diosna cloud homepage</h2>\r\n<div");
 
 WriteLiteral(" class=\"row\"");
 
-WriteLiteral(">\r\n    <h6>Select your destination / kneader</h6>\r\n    <div");
+WriteLiteral(">\r\n    <h6>Select your project / kneader</h6>\r\n    <div");
 
 WriteLiteral(" class=\"well\"");
 
@@ -118,15 +118,15 @@ WriteLiteral(">\r\n");
             #line hidden
 WriteLiteral("                    <a");
 
-WriteAttribute("href", Tuple.Create(" href=\"", 856), Tuple.Create("\"", 898)
-, Tuple.Create(Tuple.Create("", 863), Tuple.Create("/Menu/Index/", 863), true)
+WriteAttribute("href", Tuple.Create(" href=\"", 852), Tuple.Create("\"", 894)
+, Tuple.Create(Tuple.Create("", 859), Tuple.Create("/Menu/Index/", 859), true)
             
             #line 30 "..\..\Views\Home\Index.cshtml"
-, Tuple.Create(Tuple.Create("", 875), Tuple.Create<System.Object, System.Int32>(ViewBag.Numbers[index]
+, Tuple.Create(Tuple.Create("", 871), Tuple.Create<System.Object, System.Int32>(ViewBag.Numbers[index]
             
             #line default
             #line hidden
-, 875), false)
+, 871), false)
 );
 
 WriteLiteral(" class=\"btn btn-primary\"");
@@ -169,12 +169,13 @@ WriteLiteral(">\r\n    <div");
 
 WriteLiteral(" class=\"col-md-4\"");
 
-WriteLiteral(">\r\n        <h2>Compatibility</h2>\r\n        <p>\r\n            Compatible with chrom" +
-"e<br>\r\n        </p>\r\n        <p><a");
+WriteLiteral(">\r\n        <h2>Compatibility</h2>\r\n        <p>\r\n            Whole system designed" +
+" for fermentation systems for kenaders is this demo version\r\n            Compati" +
+"ble with chrome<br>\r\n        </p>\r\n        <p><a");
 
 WriteLiteral(" class=\"btn btn-primary\"");
 
-WriteLiteral(" href=\"http://users.diosn.cz/Home/Compatibility/\"");
+WriteLiteral(" href=\"http://prototype.diosna.cz/Home/Compatibility/\"");
 
 WriteLiteral(">See more &raquo;</a></p>\r\n    </div>\r\n    <div");
 
@@ -184,28 +185,28 @@ WriteLiteral(@">
         <h2>News</h2>
         <p>
             In latest update have been added following features:<br>
-            Changes commit:  …<br>
-            scheme index h2 to h4<br>
-            graph getData async done<br>
-            graph client signals drawed<br>
-            menu small style changes<br>
+            Main UI problems solved<br>
+            Reports batch detail done<br>
+            Alarms new UI <br>
+            CMS sesctions and file attachment<br>
+            Fiter from alarms is done<br>
         </p>
         <p><a");
 
 WriteLiteral(" class=\"btn btn-primary\"");
 
-WriteLiteral(" href=\"http://users.diosna.cz/Home/News/\"");
+WriteLiteral(" href=\"http://prototype.diosna.cz/Home/News/\"");
 
 WriteLiteral(">See more &raquo;</a></p>\r\n    </div>\r\n    <div");
 
 WriteLiteral(" class=\"col-md-4\"");
 
-WriteLiteral(">\r\n        <h2>Link to old version:</h2>\r\n        <p>If you need old users click " +
-"below</p>\r\n        <p><a");
+WriteLiteral(">\r\n        <h2>Link to fermentation systems:</h2>\r\n        <p>If you need old use" +
+"rs click below</p>\r\n        <p><a");
 
 WriteLiteral(" class=\"btn btn-primary\"");
 
-WriteLiteral(" href=\"http://users.nordit.cz/\"");
+WriteLiteral(" href=\"http://users.diosna.cz/\"");
 
 WriteLiteral(">Bye &raquo;</a></p>\r\n    </div>\r\n</div>");
 

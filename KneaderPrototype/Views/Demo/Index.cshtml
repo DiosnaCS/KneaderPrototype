@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Scheme demo";
+}
+<script>
+    var clicked = false;
+    $('#scheme').attr("src", "../img/scheme_1.png");
+    function clickAble() {
+        if (clicked == true) {
+            clicked = false;
+            $('#scheme').attr("src", "../img/scheme_2.png");
+        } else {
+            clicked = true;
+            $('#scheme').attr("src", "../img/scheme_1.png");
+        }
+    }
+</script>
+<h2>Scheme from HMI panel</h2>
+<img id="scheme" onclick="clickAble()" src="../img/scheme_1.png"/>

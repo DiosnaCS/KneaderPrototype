@@ -9,21 +9,21 @@
 	</contract>
 	<plc name="Kneader prototype">			
 		<graph name="Graphs">
-			<pathConfig>C:\Akce\java\grafy_cfg_PLNOW_YS.ini</pathConfig>
-			<pathNames>C:\Akce\java\grafy_names_PLNOW_YS.ini</pathNames>			
+			<pathConfig>C:\Akce\java\grafy_cfg_USINT_WS.ini</pathConfig>
+			<pathNames>C:\Akce\java\grafy_names_USINT.ini</pathNames>			
 		</graph>
 		<alarm name="Alarms">
 			<dbName>KneaderPrototype</dbName>
 		</alarm>
 		<Download>
-			<path>/Zakazky/0_New/17_rok/174005 CS03 Nachfolger</path>
+			<path>/Zakazky/0_New/17_rok/174005 CS03 Nachfolger/</path>
 		</Download>
 		<Upload>
-			<path>/Zakazky/0_New/17_rok/174005 CS03 Nachfolger</path>
+			<path>/Zakazky/0_New/17_rok/174005 CS03 Nachfolger/9_Public/</path>
 		</Upload>
 		<Report>
 			<dbName>KneaderPrototype</dbName>
-			<tableName>KNE_events</tableName>
+			<tableName>events</tableName>
 			<congirationNumber>1</congirationNumber>
 		</Report>
 		<CMS name="Project Info">

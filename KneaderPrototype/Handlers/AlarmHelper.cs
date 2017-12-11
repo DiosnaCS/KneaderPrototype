@@ -53,13 +53,14 @@ namespace KneaderPrototype.Handlers
             NpgsqlCommand cmd;
             string whereIds = string.Empty;
             string langWhere = string.Empty;
-            if(lang == null)
+            string sql = string.Empty;
+            if (lang == null)
             {
                 langWhere = "";
             }
             else
             {
-                langWhere = " lang='" + lang +"'";
+                langWhere = " lang='" + lang + "'";
             }
             string connstring = String.Format("Server={0};Port={1};User Id={2};Password={3};Database={4};",
             "192.168.2.12", 5432, "postgres", "Nordit0276", DB);
@@ -73,14 +74,29 @@ namespace KneaderPrototype.Handlers
                     whereIds += "alarm_id=" + id.ToString() + " OR ";
                 }
                 whereIds = whereIds.Substring(0, whereIds.Length - 4);
-                // Execute the query and obtain a result set                
-                string sql = string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE (plc_id={0} AND {1} AND lang='{2}')", plcID, whereIds, lang);
+                // Execute the query and obtain a result set          
+                if (langWhere == "")
+                {
+                    sql = string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE (plc_id={0} AND {1})", plcID, whereIds);
+                }
+                else
+                {
+                    sql = string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE (plc_id={0} AND {1} AND lang='{2}')", plcID, whereIds, lang);
+                }
                 cmd = new NpgsqlCommand(sql, conn);
             }
             else
             {
                 // Execute the query and obtain a result set                
-                cmd = new NpgsqlCommand(string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE plc_id={0} AND lang='{1}'", plcID, lang),conn);
+                if (langWhere == "")
+                {
+                    sql = string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE plc_id={0}", plcID);
+                }
+                else
+                {
+                    sql = string.Format("SELECT title,lang,alarm_id,plc_id FROM alarm_texts WHERE plc_id={0} AND lang='{1}'", plcID, lang);
+                }
+                cmd = new NpgsqlCommand(sql, conn);
             }
             //Prepare DataReader
             NpgsqlDataReader dataReader = cmd.ExecuteReader();
@@ -141,11 +157,12 @@ namespace KneaderPrototype.Handlers
             else
             {
                 if (count != 0)
-                    sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {1}",plcID, count);
+                    sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {1}", plcID, count);
                 else
                     sql = "SELECT * FROM alarm_history ORDER BY origin_pktime DESC";
             }
-            if (offsetPage > 0 && count > 0) {
+            if (offsetPage > 0 && count > 0)
+            {
                 if (ids != null)
                 {
                     foreach (int id in ids)
@@ -153,9 +170,9 @@ namespace KneaderPrototype.Handlers
                         whereIds += "alarm_id=" + id.ToString() + " OR ";
                     }
                     // Execute the query and obtain a result set                
-                    sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {1} OFFSET {2}", plcID, whereIds, count, offsetPage);
+                    sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {1} OFFSET {2}", plcID, whereIds, count * offsetPage);
                 }
-                sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {0} OFFSET {1}",plcID, count, offsetPage);
+                sql = string.Format("SELECT * FROM alarm_history WHERE plc_id={0} ORDER BY origin_pktime DESC LIMIT {1} OFFSET {2}", plcID, count, count * offsetPage);
             }
             conn.Open();
             NpgsqlCommand cmd = new NpgsqlCommand(sql, conn);
@@ -169,12 +186,13 @@ namespace KneaderPrototype.Handlers
                 //small improvment beacause alarm_id in table alarm_texts and alarm_id in table alarm_history are bind
                 if (titles.Where(p => (p.id) == id && p.plcID == plcID && p.lang == lang).Count() == 1)
                 {
-                    alarm.title = titles.Single(p=>p.id == id && p.plcID == plcID && p.lang == lang).title;
-                } else
+                    alarm.title = titles.Single(p => p.id == id && p.plcID == plcID && p.lang == lang).title;
+                }
+                else
                 {
                     alarm.title = "Title does not match with any of alarm id in texts and in db. DB id:" + id;
                 }
-                int originTime = int.Parse(dr["origin_pktime"].ToString());                  
+                int originTime = int.Parse(dr["origin_pktime"].ToString());
                 int expTime = Int32.Parse(dr["expiry_pktime"].ToString());
                 alarm.originTime = pkTimeToDateTime(originTime);
                 alarm.expiryTime = pkTimeToDateTime(expTime);
@@ -186,7 +204,7 @@ namespace KneaderPrototype.Handlers
         }
 
         /// <summary>
-        /// Method to get alarms async
+        /// Method to get alarms async for notifications
         /// </summary>
         /// <param name="DB">db name</param>
         /// <param name="count">count of alarms that you want to select</param>
